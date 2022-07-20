@@ -153,6 +153,7 @@ textarea {
     text-decoration: none;
     transition: $transitionFast;
     text-transform: uppercase;
+    cursor: pointer;
 
     &.white {
         background-color: $white;
@@ -665,7 +666,7 @@ textarea {
                             transition: $transitionFast;
                             z-index: -1;
                         }
-
+                        &.active ,
                         &:hover {
                             background-color: transparent;
 
@@ -832,6 +833,32 @@ textarea {
 
 }
 
+/*** Breadcrumb ***/
+.breadcrumb {
+    .breadcrumb-item {
+        a {
+            color: $blue;
+            text-decoration: none;
+        }
+        &.active {
+            color: $white;
+            font-weight: 700;
+        }
+
+        +.breadcrumb-item {
+            &::before {
+                content: '';
+                background-image: url('../img/breadcrumb-icon.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 22px;
+                height: 22px;
+                margin-#{$end}: 0.5rem;
+            }
+        }
+    }
+}
+
 /*** Hero ***/
 .hero {
     height: 100vh;
@@ -981,6 +1008,49 @@ textarea {
         }
     }
 
+}
+
+.hero-innner {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    .bg-image {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        #{$start}: 0;
+        #{$end}: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            #{$start}: -40px;
+            background-image: url('../img/hero-inner-shape.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 50%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            #{$start}: 0;
+            #{$end}: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: $blue-dark, $alpha: 0.9);
+        }
+
+    }
 }
 
 /*** Welcome to BARQ ***/
@@ -1728,4 +1798,55 @@ textarea {
             }
         }
     }
+}
+
+/*** Who We Are ***/
+.who-we-are-list {
+    background-color: $offWhite;
+    li {
+        margin-#{$start}: 2rem;
+        &:first-child {
+            margin-#{$start}: 0px;
+        }
+        .link {
+            text-decoration: none;
+            color: $black;
+            font-weight: 700;
+            transition: $transitionFast;
+            padding: 0.75rem;
+            display: inline-block;
+            text-transform: capitalize;
+            &.active {
+                background-color: $blue;
+                color: $white;
+            }
+            &:hover {
+                &:not(.active) {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
+
+.who-we-are {
+    .wrap-image {
+        max-height: 400px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            #{$start}:0;
+            top: -13%;
+            background-image: url('../img/character-b.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 150px;
+            height: 150px;
+        }
+    }
+}
+
+.pb-title {
+    padding-bottom: 5rem;
 }
