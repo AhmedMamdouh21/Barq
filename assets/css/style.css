@@ -1803,4 +1803,132 @@ textarea {
 .pb-title {
   padding-bottom: 5rem;
 }
+
+/*** Our Story ***/
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  display: block;
+  width: 1.5px;
+  height: 100%;
+  background: #EBEBEB;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 767.98px) {
+  .timeline::before {
+    margin: 0;
+    left: 0;
+  }
+}
+
+.timeline .timeline-item {
+  position: relative;
+}
+
+.timeline .timeline-item .icon {
+  font-size: 1.5rem;
+  width: 8px;
+  height: 8px;
+  margin: auto;
+  position: absolute;
+  background-color: #171717;
+  top: calc(50%);
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 767.98px) {
+  .timeline .timeline-item .icon {
+    right: auto;
+    left: -3px;
+    top: 1.5rem;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+.timeline .timeline-item .date-content {
+  padding-right: 2.5rem;
+}
+
+.timeline .timeline-item .date-content .year {
+  text-align: right;
+}
+
+@media (max-width: 767.98px) {
+  .timeline .timeline-item .date-content .year {
+    text-align: center;
+  }
+}
+
+.timeline .timeline-item .timeline-content {
+  padding-left: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .timeline .timeline-item:nth-child(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .timeline .timeline-item:nth-child(even) .date-content {
+    padding-left: 2.5rem;
+  }
+  .timeline .timeline-item:nth-child(even) .date-content .year {
+    text-align: left;
+  }
+  .timeline .timeline-item:nth-child(even) .timeline-content {
+    padding-right: 2.5rem;
+    text-align: right;
+  }
+}
+
+/*** Meet The Management Team ***/
+.management-team .card-team .image {
+  width: 170px;
+  position: relative;
+}
+
+.management-team .card-team .image::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 40px;
+  height: 40px;
+  background-color: #00BBE3;
+  z-index: -1;
+}
+
+.management-team .card-team .image::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: -12px;
+  width: 65%;
+  height: 65%;
+  border: 1px solid #A1ABAC;
+  z-index: -1;
+}
+
+.management-team .card-team .image img {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.management-team .card-team .image:hover img {
+  -webkit-transform: scale3d(1.075, 1.075, 1);
+          transform: scale3d(1.075, 1.075, 1);
+}
 /*# sourceMappingURL=style.css.map */

@@ -666,7 +666,8 @@ textarea {
                             transition: $transitionFast;
                             z-index: -1;
                         }
-                        &.active ,
+
+                        &.active,
                         &:hover {
                             background-color: transparent;
 
@@ -840,6 +841,7 @@ textarea {
             color: $blue;
             text-decoration: none;
         }
+
         &.active {
             color: $white;
             font-weight: 700;
@@ -1014,6 +1016,7 @@ textarea {
     height: 400px;
     overflow: hidden;
     position: relative;
+
     .bg-image {
         position: absolute;
         top: 0;
@@ -1709,10 +1712,12 @@ textarea {
 .prevent-defult {
     cursor: auto;
 }
+
 /*** Footer ***/
 .footer {
     position: relative;
     overflow: hidden;
+
     .bg-footer {
         position: absolute;
         inset: 0;
@@ -1720,6 +1725,7 @@ textarea {
         height: 100%;
         z-index: -1;
         pointer-events: none;
+
         &::after {
             content: '';
             position: absolute;
@@ -1729,52 +1735,58 @@ textarea {
             background-color: rgba($color: $blue-dark, $alpha: 0.83);
         }
     }
+
     .footer-list-iteam {
-            a {
-                text-decoration: none;
-                color: $white;
+        a {
+            text-decoration: none;
+            color: $white;
+        }
+
+        .title {
+            position: relative;
+            color: $white;
+            display: block;
+
+            &::before {
+                content: '';
+                position: absolute;
+                #{$start}: -1rem;
+                top: 50%;
+                transform: translateY(-50%) rotate(45deg);
+                width: 8px;
+                height: 8px;
+                background-color: $blue;
+
             }
-    
-            .title {
-                position: relative;
-                color: $white;
-                display: block;
-                &::before {
-                    content: '';
-                    position: absolute;
-                    #{$start}:-1rem;
-                    top: 50%;
-                    transform: translateY(-50%)  rotate(45deg);
-                    width: 8px;
-                    height: 8px;
-                    background-color: $blue;
-                    
-                }
+        }
+
+        .link-iteam {
+            margin-bottom: 0.5rem;
+            display: inline-block;
+            text-transform: capitalize;
+            transition: $transitionFast;
+
+            &:hover {
+                color: $blue;
             }
-            .link-iteam {
-                margin-bottom: 0.5rem;
-                display: inline-block;
-                text-transform: capitalize;
-                transition: $transitionFast;
-                &:hover {
-                    color: $blue;
-                }
-            }
+        }
     }
 
     .logo {
         max-width: 150px;
     }
 
-    .social-media  {
+    .social-media {
         .list-social-media {
             .icon {
                 color: $white;
                 display: block;
-                .icon-tabler{
+
+                .icon-tabler {
                     max-width: 32px;
                     transition: $transitionFast;
                 }
+
                 &:hover {
                     .icon-tabler {
                         stroke: $blue;
@@ -1783,16 +1795,20 @@ textarea {
             }
         }
     }
+
     .backToTop {
-    cursor: pointer;
+        cursor: pointer;
     }
 }
+
 .copyright {
     background-color: $offWhite;
     color: $gray-dark;
+
     .made {
         a {
             color: $gray-dark;
+
             &:hover {
                 color: $blue-dark;
             }
@@ -1803,11 +1819,14 @@ textarea {
 /*** Who We Are ***/
 .who-we-are-list {
     background-color: $offWhite;
+
     li {
         margin-#{$start}: 2rem;
+
         &:first-child {
             margin-#{$start}: 0px;
         }
+
         .link {
             text-decoration: none;
             color: $black;
@@ -1816,10 +1835,12 @@ textarea {
             padding: 0.75rem;
             display: inline-block;
             text-transform: capitalize;
+
             &.active {
                 background-color: $blue;
                 color: $white;
             }
+
             &:hover {
                 &:not(.active) {
                     color: $blue;
@@ -1833,10 +1854,11 @@ textarea {
     .wrap-image {
         max-height: 400px;
         position: relative;
+
         &::before {
             content: '';
             position: absolute;
-            #{$start}:0;
+            #{$start}: 0;
             top: -13%;
             background-image: url('../img/character-b.png');
             background-repeat: no-repeat;
@@ -1849,4 +1871,126 @@ textarea {
 
 .pb-title {
     padding-bottom: 5rem;
+}
+
+/*** Our Story ***/
+.timeline {
+    position: relative;
+    // overflow: hidden;
+    &::before {
+        content: "";
+        display: block;
+        width: 1.5px;
+        height: 100%;
+        background: $offWhite;
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    @media (max-width: 767.98px) {
+        &::before {
+            margin: 0;
+            left: 0;
+        }
+    }
+
+    .timeline-item {
+        position: relative;
+        
+        .icon {
+            font-size: 1.5rem;
+            width: 8px;
+            height: 8px;
+            margin: auto;
+            position: absolute;
+            background-color: $black;
+            top: calc(50%);
+            transform: translateY(-50%) rotate(45deg);
+            #{$start}: 0;
+            #{$end}: 0;
+            @media (max-width: 767.98px) {
+                #{$end}: auto ;
+                #{$start}: -3px;
+                top: 1.5rem;
+                transform: rotate(45deg);
+            }
+        }
+
+        .date-content {
+            padding-#{$end}: 2.5rem;
+            .year {
+                text-align: #{$end};
+
+                @media (max-width: 767.98px) {
+                    text-align: center;
+
+                }
+            }
+        }
+
+        .timeline-content {
+            padding-#{$start}: 2.5rem;
+        }
+        @media (min-width: 768px) { 
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+                .date-content {
+                    padding-#{$start}: 2.5rem;
+                    .year {
+                        text-align: #{$start};
+                    }
+                }
+                .timeline-content {
+                    padding-#{$end}: 2.5rem;
+                    text-align: #{$end};
+                }
+            }
+         }
+    }
+
+
+   
+
+
+}
+
+/*** Meet The Management Team ***/
+.management-team  {
+.card-team {
+    .image {
+        width: 170px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            #{$end}:-6px;
+            width: 40px;
+            height: 40px;
+            background-color: $blue;
+            z-index: -1;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            #{$start}: -12px;
+            width: 65%;
+            height: 65%;
+            border: 1px solid $gray;
+            z-index: -1;
+        }
+        img {
+            transition: $transitionFast;
+        }
+        &:hover {
+            img {
+                transform: scale3d(1.075,1.075,1);
+            }
+        }
+    }
+}
 }
