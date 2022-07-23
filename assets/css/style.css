@@ -492,6 +492,14 @@ textarea {
   text-transform: capitalize;
 }
 
+@media (max-width: 991.98px) {
+  .navbar .navbar-nav {
+    height: 80vh;
+    overflow-y: auto;
+    padding-top: 75px;
+  }
+}
+
 .navbar .navbar-nav .nav-item {
   margin-left: 0.65rem;
   margin-right: 0.65rem;
@@ -611,6 +619,12 @@ textarea {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   position: relative;
+}
+
+@media (max-width: 991.98px) {
+  .navbar .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item {
+    text-align: center;
+  }
 }
 
 .navbar .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item::before {
@@ -1755,8 +1769,10 @@ textarea {
   background-color: #EBEBEB;
 }
 
-.who-we-are-list li {
-  margin-left: 2rem;
+@media (min-width: 768px) {
+  .who-we-are-list li {
+    margin-left: 2rem;
+  }
 }
 
 .who-we-are-list li:first-child {
@@ -1784,8 +1800,14 @@ textarea {
 }
 
 .who-we-are .wrap-image {
-  max-height: 400px;
+  height: 400px;
   position: relative;
+}
+
+@media (max-width: 767.98px) {
+  .who-we-are .wrap-image {
+    height: 250px;
+  }
 }
 
 .who-we-are .wrap-image::before {
@@ -1800,8 +1822,21 @@ textarea {
   height: 150px;
 }
 
+@media (max-width: 767.98px) {
+  .who-we-are .wrap-image::before {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 .pb-title {
   padding-bottom: 5rem;
+}
+
+@media (max-width: 767.98px) {
+  .pb-title {
+    padding-bottom: 3rem;
+  }
 }
 
 /*** Our Story ***/
@@ -1895,9 +1930,25 @@ textarea {
 }
 
 /*** Meet The Management Team ***/
+.management-team .card-team {
+  margin-bottom: 3.5rem;
+}
+
+@media (max-width: 767.98px) {
+  .management-team .card-team {
+    margin-bottom: 1.5rem;
+  }
+}
+
 .management-team .card-team .image {
   width: 170px;
   position: relative;
+}
+
+@media (max-width: 767.98px) {
+  .management-team .card-team .image {
+    margin-bottom: 2.5rem;
+  }
 }
 
 .management-team .card-team .image::before {

@@ -511,10 +511,15 @@ textarea {
     }
 
     .navbar-nav {
+        @media (max-width: 991.98px) {
+            height: 80vh;
+            overflow-y: auto;
+            padding-top: 75px;
+        }
         .nav-item {
             margin-#{$start}: 0.65rem;
             margin-#{$end}: 0.65rem;
-
+           
             &:first-child {
                 margin-#{$start}: 0px;
 
@@ -654,6 +659,9 @@ textarea {
                         color: $white;
                         transition: $transitionFast;
                         position: relative;
+                        @media (max-width: 991.98px) {
+                            text-align: center;
+                        }
 
                         &::before {
                             content: '';
@@ -1819,9 +1827,12 @@ textarea {
 /*** Who We Are ***/
 .who-we-are-list {
     background-color: $offWhite;
+   
 
     li {
-        margin-#{$start}: 2rem;
+        @media (min-width: 768px) { 
+            margin-#{$start}: 2rem;
+         }
 
         &:first-child {
             margin-#{$start}: 0px;
@@ -1852,9 +1863,11 @@ textarea {
 
 .who-we-are {
     .wrap-image {
-        max-height: 400px;
+        height: 400px;
         position: relative;
-
+        @media (max-width: 767.98px) { 
+            height: 250px;
+         }
         &::before {
             content: '';
             position: absolute;
@@ -1865,12 +1878,19 @@ textarea {
             background-size: contain;
             width: 150px;
             height: 150px;
+            @media (max-width: 767.98px) { 
+                width: 100px;
+                height: 100px;
+             }
         }
     }
 }
 
 .pb-title {
     padding-bottom: 5rem;
+    @media (max-width: 767.98px) { 
+        padding-bottom: 3rem;
+     }
 }
 
 /*** Our Story ***/
@@ -1960,9 +1980,17 @@ textarea {
 /*** Meet The Management Team ***/
 .management-team  {
 .card-team {
+    margin-bottom: 3.5rem;
+    @media (max-width: 767.98px) { 
+        margin-bottom: 1.5rem;
+     }
+
     .image {
         width: 170px;
         position: relative;
+        @media (max-width: 767.98px) { 
+            margin-bottom: 2.5rem;
+         }
         &::before {
             content: '';
             position: absolute;
