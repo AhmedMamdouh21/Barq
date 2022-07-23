@@ -2022,3 +2022,21 @@ textarea {
     }
 }
 }
+
+/***  What's Our Secret? ***/
+
+.our-secret {
+    .icon {
+        max-width: 70px;
+        @media (max-width: 767.98px) {
+            text-align: center;
+            margin: {
+                #{$start}:auto;
+                #{$end}:auto;
+            }
+        }
+    }
+    .description {
+        color: $gray-dark;
+    }
+}
