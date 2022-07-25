@@ -360,6 +360,24 @@ textarea {
     }
 }
 
+.card-title {
+    @media (min-width: 1600px) {
+        font-size: 22px;
+    }
+
+    @media (min-width: 1200px) and (max-width: 1599.98px) {
+        font-size: 20px;
+    }
+    @media (min-width: 576px) and (max-width: 1199.98px) {
+        font-size: 18px;
+    }
+
+
+    @media (max-width: 575.98px) {
+        font-size: 16px;
+    }
+}
+
 .small-title {
 
     @media (min-width: 1600px) {
@@ -2038,5 +2056,194 @@ textarea {
     }
     .description {
         color: $gray-dark;
+    }
+}
+
+/***  Solutions ***/
+
+.solutions-sections {
+    .card-solution {
+        padding: 2.5rem 1.5rem 1.5rem;
+        box-shadow: 0px 3px 6px #00000029;
+        position: relative;
+        @media (min-width: 992px) {
+            height: 100%;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            #{$start}:0px;
+            width: 1rem;
+            height: 1rem;
+            background-color: $blue;
+        } 
+        .icon {
+            min-width: 60px;
+            max-width: 60px;
+            @media (max-width: 767.98px) {
+                min-width: 40px;
+            max-width: 40px;
+            }
+
+        }
+    }
+}
+
+// Cyber Security
+.cyber-security {
+    .wrap-image {
+        &::before {
+            display: none;
+        }
+    }
+}
+
+.technologies {
+    background-color: $offWhite;
+
+    .card-technologies {
+        // padding-top: 1.5rem;
+        background-color: $white;
+        @media (min-width: 992px) {
+            height: 100%;
+        }
+        .icon-wrap {
+            background-color: $offWhite;
+        }
+        .icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            padding: 1.35rem;
+            overflow: hidden;
+            background-color: $white;
+            margin-bottom: -2.5rem ;
+            position: relative;
+            z-index: 3;
+            margin-#{$start}: -0.5rem;
+            border: 12px solid $offWhite;
+            @media (max-width: 767.98px) { 
+                width:90px;
+            height:90px;
+            padding: 0.9rem;
+            border-width: 10px;
+             }
+
+
+          
+        }
+        .info {
+            background-color: $white;
+            padding: 4rem 1.5rem 1.5rem;
+            position: relative;
+            
+            ul {
+                margin-bottom: 0;
+                li {
+                    @extend .small-description;
+                }
+            }
+        }
+    }
+}
+
+.related-partners {
+    .logo-wrap {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: $blue-dark;
+            #{$end}: -3.5px;
+            bottom: -10.5px;
+            z-index: 9;
+            transform: rotate(45deg);
+        }
+       
+        .logo {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin-top: 0 !important;
+            &::before {
+                content: '';
+                position: absolute;
+                #{$start}: 0;
+                bottom: -7.5px;
+                width: 100%;
+                height: 2px;
+                background-color: $gray-light;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                #{$end}: 0;
+                bottom: 0;
+                height: calc(100% + 3px);
+                width: 2px;
+                background-color: $gray-light;
+            }
+    
+            img {
+                max-width: 80%;
+            }
+        }
+       
+    
+        @media (min-width: 992px) {
+            &:nth-child(4),
+            &:last-child {
+             .logo {
+                 &::after {
+                     display: none;
+                 }
+             }
+            }
+             &:nth-child(n+4) {
+                 &::after {
+                     display: none;
+                 }
+               
+             } 
+             &:nth-child(n+5) {
+                 .logo {
+                     &::before {
+                         display: none;
+                     }
+                 }
+             } 
+
+        }
+
+        @media (max-width: 991.98px) {
+            &:nth-child(even){
+                &::after {
+                    display: none;
+                }
+                .logo {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+            &:last-child,
+            &:nth-last-child(2) {
+                &::after {
+                    display: none;
+                }
+                .logo {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+
+      
     }
 }
