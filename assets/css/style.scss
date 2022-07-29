@@ -1212,6 +1212,12 @@ textarea {
         background-size: contain;
     }
 
+    &.remove-shape {
+        &::before {
+            display: none;
+        }
+    }
+
     .title {
         position: relative;
         margin: 0;

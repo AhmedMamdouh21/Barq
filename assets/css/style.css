@@ -1185,6 +1185,10 @@ textarea {
   background-size: contain;
 }
 
+.services.remove-shape::before {
+  display: none;
+}
+
 .services .title {
   position: relative;
   margin: 0;
