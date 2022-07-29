@@ -310,6 +310,35 @@ textarea {
   }
 }
 
+.large-title {
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+@media (min-width: 1600px) {
+  .large-title {
+    font-size: 38px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1599.98px) {
+  .large-title {
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 1199.98px) {
+  .large-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .large-title {
+    font-size: 24px;
+  }
+}
+
 .medium-title {
   font-weight: 500;
 }
@@ -411,25 +440,25 @@ textarea {
 }
 
 @media (min-width: 1600px) {
-  .small-description, .technologies .card-technologies .info ul li {
+  .small-description, .technologies .card-technologies .info ul li, .our-services .tab-content .tab-pane ul li {
     font-size: 15px;
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1599.98px) {
-  .small-description, .technologies .card-technologies .info ul li {
+  .small-description, .technologies .card-technologies .info ul li, .our-services .tab-content .tab-pane ul li {
     font-size: 13px;
   }
 }
 
 @media (min-width: 576px) and (max-width: 1199.98px) {
-  .small-description, .technologies .card-technologies .info ul li {
+  .small-description, .technologies .card-technologies .info ul li, .our-services .tab-content .tab-pane ul li {
     font-size: 12px;
   }
 }
 
 @media (max-width: 575.98px) {
-  .small-description, .technologies .card-technologies .info ul li {
+  .small-description, .technologies .card-technologies .info ul li, .our-services .tab-content .tab-pane ul li {
     font-size: 10px;
   }
 }
@@ -468,6 +497,8 @@ textarea {
 .custom-arrow {
   width: 50px;
   height: 50px;
+  min-width: 50px;
+  min-height: 50px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   z-index: 999;
@@ -996,9 +1027,10 @@ textarea {
 }
 
 .hero-innner {
-  height: 400px;
+  height: 320px;
   overflow: hidden;
   position: relative;
+  padding-top: 0 !important;
 }
 
 .hero-innner .bg-image {
@@ -2192,5 +2224,120 @@ textarea {
   .related-partners .logo-wrap:last-child .logo::before, .related-partners .logo-wrap:nth-last-child(2) .logo::before {
     display: none;
   }
+}
+
+/***   Managed Services  ***/
+.our-services .nav-pills .nav-link {
+  -webkit-box-shadow: 0px 3px 6px #0000001A !important;
+          box-shadow: 0px 3px 6px #0000001A !important;
+  padding: 1rem;
+  width: 85px;
+  height: 85px;
+}
+
+@media (max-width: 991.98px) {
+  .our-services .nav-pills .nav-link {
+    width: 65px;
+    height: 65px;
+    padding: 0.5rem;
+  }
+}
+
+.our-services .nav-pills .nav-link:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.our-services .nav-pills .nav-link .icon {
+  width: 80%;
+  margin: auto;
+}
+
+@media (max-width: 991.98px) {
+  .our-services .nav-pills .nav-link .icon {
+    width: 70%;
+  }
+}
+
+.our-services .nav-pills .nav-link.active {
+  background-color: #00BBE3;
+}
+
+.our-services .nav-pills .nav-link.active .icon {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+
+.our-services .tab-content {
+  background-color: #EBEBEB;
+}
+
+.our-services .tab-content .tab-pane {
+  height: 100%;
+}
+
+.our-services .tab-content .tab-pane .info {
+  padding: 2.5rem 4rem;
+}
+
+@media (max-width: 991.98px) {
+  .our-services .tab-content .tab-pane .info {
+    padding: 1.5rem;
+  }
+}
+
+.our-services .tab-content .tab-pane .big-icon {
+  -webkit-filter: invert(88%) sepia(2%) saturate(553%) hue-rotate(83deg) brightness(121%) contrast(74%);
+          filter: invert(88%) sepia(2%) saturate(553%) hue-rotate(83deg) brightness(121%) contrast(74%);
+  opacity: 0.5;
+}
+
+.our-services .tab-content .tab-pane ul {
+  margin-bottom: 0;
+}
+
+.photo-gallery .swiper-slide .img {
+  height: 500px;
+}
+
+@media (max-width: 991.98px) {
+  .photo-gallery .swiper-slide .img {
+    height: 300px;
+  }
+}
+
+.photo-gallery .swiper-pagination {
+  bottom: 0;
+}
+
+.photo-gallery .swiper-pagination .swiper-pagination-bullet {
+  border: 1px solid #DEDEDE;
+}
+
+.photo-gallery .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #00BBE3;
+  border-color: #00BBE3;
+}
+
+.photo-gallery .swiper-button-next,
+.photo-gallery .swiper-button-prev {
+  top: 0;
+  right: auto;
+  left: auto;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 3px 6px #0000001a;
+          box-shadow: 0px 3px 6px #0000001a;
+  position: relative;
+  top: auto;
+}
+
+.photo-gallery .swiper-button-next:hover,
+.photo-gallery .swiper-button-prev:hover {
+  background-color: #007AA8;
+  border-color: #007AA8;
+}
+
+.photo-gallery .swiper-button-next:hover::after,
+.photo-gallery .swiper-button-prev:hover::after {
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=style.css.map */

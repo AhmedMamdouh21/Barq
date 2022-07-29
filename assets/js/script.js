@@ -4,6 +4,10 @@ $(window).on("load", function () {
   $(".padding-top").css({
     "padding-top": navBarHeight + "px",
   });
+
+  $(".hero-innner").css({
+    "margin-top": navBarHeight + "px",
+  });
   // console.log("navBarHeight", navBarHeight);
   // }
   $(".navbar .navbar-toggler").on("click", function () {
@@ -299,6 +303,29 @@ $(window).on("load", function () {
   if ($(".prevent-defult").length) {
     $(".prevent-defult").on("click", function (event) {
       event.preventDefault();
+    });
+  }
+  // Photo Gallery
+  if ($(".swiper-photo-gallery").length) {
+    let swiperHero = new Swiper(".swiper-photo-gallery", {
+      loop: true,
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+      speed: 800,
+      autoplay: {
+        disableOnInteraction: false,
+        delay: 5000,
+      },
+      pagination: {
+        el: ".swiper-photo-gallery .swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-photo-gallery .swiper-button-next",
+        prevEl: ".swiper-photo-gallery .swiper-button-prev",
+      },
     });
   }
 });
