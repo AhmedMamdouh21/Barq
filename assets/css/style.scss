@@ -392,6 +392,7 @@ textarea {
     @media (min-width: 1200px) and (max-width: 1599.98px) {
         font-size: 20px;
     }
+
     @media (min-width: 576px) and (max-width: 1199.98px) {
         font-size: 18px;
     }
@@ -560,10 +561,11 @@ textarea {
             overflow-y: auto;
             padding-top: 75px;
         }
+
         .nav-item {
             margin-#{$start}: 0.65rem;
             margin-#{$end}: 0.65rem;
-           
+
             &:first-child {
                 margin-#{$start}: 0px;
 
@@ -703,6 +705,7 @@ textarea {
                         color: $white;
                         transition: $transitionFast;
                         position: relative;
+
                         @media (max-width: 991.98px) {
                             text-align: center;
                         }
@@ -1878,12 +1881,12 @@ textarea {
 /*** Who We Are ***/
 .who-we-are-list {
     background-color: $offWhite;
-   
+
 
     li {
-        @media (min-width: 768px) { 
+        @media (min-width: 768px) {
             margin-#{$start}: 2rem;
-         }
+        }
 
         &:first-child {
             margin-#{$start}: 0px;
@@ -1916,9 +1919,11 @@ textarea {
     .wrap-image {
         height: 400px;
         position: relative;
-        @media (max-width: 767.98px) { 
+
+        @media (max-width: 767.98px) {
             height: 250px;
-         }
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -1929,24 +1934,27 @@ textarea {
             background-size: contain;
             width: 150px;
             height: 150px;
-            @media (max-width: 767.98px) { 
+
+            @media (max-width: 767.98px) {
                 width: 100px;
                 height: 100px;
-             }
+            }
         }
     }
 }
 
 .pb-title {
     padding-bottom: 5rem;
-    @media (max-width: 767.98px) { 
+
+    @media (max-width: 767.98px) {
         padding-bottom: 3rem;
-     }
+    }
 }
 
 /*** Our Story ***/
 .timeline {
     position: relative;
+
     // overflow: hidden;
     &::before {
         content: "";
@@ -1970,7 +1978,7 @@ textarea {
 
     .timeline-item {
         position: relative;
-        
+
         .icon {
             font-size: 1.5rem;
             width: 8px;
@@ -1982,8 +1990,9 @@ textarea {
             transform: translateY(-50%) rotate(45deg);
             #{$start}: 0;
             #{$end}: 0;
+
             @media (max-width: 767.98px) {
-                #{$end}: auto ;
+                #{$end}: auto;
                 #{$start}: -3px;
                 top: 1.5rem;
                 transform: rotate(45deg);
@@ -1992,6 +2001,7 @@ textarea {
 
         .date-content {
             padding-#{$end}: 2.5rem;
+
             .year {
                 text-align: #{$end};
 
@@ -2005,73 +2015,83 @@ textarea {
         .timeline-content {
             padding-#{$start}: 2.5rem;
         }
-        @media (min-width: 768px) { 
+
+        @media (min-width: 768px) {
             &:nth-child(even) {
                 flex-direction: row-reverse;
+
                 .date-content {
                     padding-#{$start}: 2.5rem;
+
                     .year {
                         text-align: #{$start};
                     }
                 }
+
                 .timeline-content {
                     padding-#{$end}: 2.5rem;
                     text-align: #{$end};
                 }
             }
-         }
+        }
     }
 
 
-   
+
 
 
 }
 
 /*** Meet The Management Team ***/
-.management-team  {
-.card-team {
-    margin-bottom: 3.5rem;
-    @media (max-width: 767.98px) { 
-        margin-bottom: 1.5rem;
-     }
+.management-team {
+    .card-team {
+        margin-bottom: 3.5rem;
 
-    .image {
-        width: 170px;
-        position: relative;
-        @media (max-width: 767.98px) { 
-            margin-bottom: 2.5rem;
-         }
-        &::before {
-            content: '';
-            position: absolute;
-            top: -6px;
-            #{$end}:-6px;
-            width: 40px;
-            height: 40px;
-            background-color: $blue;
-            z-index: -1;
+        @media (max-width: 767.98px) {
+            margin-bottom: 1.5rem;
         }
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            #{$start}: -12px;
-            width: 65%;
-            height: 65%;
-            border: 1px solid $gray;
-            z-index: -1;
-        }
-        img {
-            transition: $transitionFast;
-        }
-        &:hover {
+
+        .image {
+            width: 170px;
+            position: relative;
+
+            @media (max-width: 767.98px) {
+                margin-bottom: 2.5rem;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -6px;
+                #{$end}: -6px;
+                width: 40px;
+                height: 40px;
+                background-color: $blue;
+                z-index: -1;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -12px;
+                #{$start}: -12px;
+                width: 65%;
+                height: 65%;
+                border: 1px solid $gray;
+                z-index: -1;
+            }
+
             img {
-                transform: scale3d(1.075,1.075,1);
+                transition: $transitionFast;
+            }
+
+            &:hover {
+                img {
+                    transform: scale3d(1.075, 1.075, 1);
+                }
             }
         }
     }
-}
 }
 
 /***  What's Our Secret? ***/
@@ -2079,19 +2099,23 @@ textarea {
 .our-secret {
     .icon {
         max-width: 70px;
+
         @media (max-width: 767.98px) {
             text-align: center;
+
             margin: {
-                #{$start}:auto;
-                #{$end}:auto;
+                #{$start}: auto;
+                #{$end}: auto;
             }
         }
     }
+
     .info {
         @media (min-width: 992px) {
-         text-align: #{$start};
+            text-align: #{$start};
         }
     }
+
     .description {
         color: $gray-dark;
     }
@@ -2104,6 +2128,7 @@ textarea {
         padding: 2.5rem 1.5rem 1.5rem;
         box-shadow: 0px 3px 6px #00000029;
         position: relative;
+
         @media (min-width: 992px) {
             height: 100%;
         }
@@ -2112,17 +2137,19 @@ textarea {
             content: '';
             position: absolute;
             bottom: 0px;
-            #{$start}:0px;
+            #{$start}: 0px;
             width: 1rem;
             height: 1rem;
             background-color: $blue;
-        } 
+        }
+
         .icon {
             min-width: 60px;
             max-width: 60px;
+
             @media (max-width: 767.98px) {
                 min-width: 40px;
-            max-width: 40px;
+                max-width: 40px;
             }
 
         }
@@ -2144,12 +2171,15 @@ textarea {
     .card-technologies {
         // padding-top: 1.5rem;
         background-color: $white;
+
         @media (min-width: 992px) {
             height: 100%;
         }
+
         .icon-wrap {
             background-color: $offWhite;
         }
+
         .icon {
             width: 120px;
             height: 120px;
@@ -2157,28 +2187,31 @@ textarea {
             padding: 1.35rem;
             overflow: hidden;
             background-color: $white;
-            margin-bottom: -2.5rem ;
+            margin-bottom: -2.5rem;
             position: relative;
             z-index: 3;
             margin-#{$start}: -0.5rem;
             border: 12px solid $offWhite;
-            @media (max-width: 767.98px) { 
-                width:90px;
-            height:90px;
-            padding: 0.9rem;
-            border-width: 10px;
-             }
+
+            @media (max-width: 767.98px) {
+                width: 90px;
+                height: 90px;
+                padding: 0.9rem;
+                border-width: 10px;
+            }
 
 
-          
+
         }
+
         .info {
             background-color: $white;
             padding: 4rem 1.5rem 1.5rem;
             position: relative;
-            
+
             ul {
                 margin-bottom: 0;
+
                 li {
                     @extend .small-description;
                 }
@@ -2190,6 +2223,7 @@ textarea {
 .related-partners {
     .logo-wrap {
         position: relative;
+
         &::after {
             content: '';
             position: absolute;
@@ -2201,12 +2235,13 @@ textarea {
             z-index: 9;
             transform: rotate(45deg);
         }
-       
+
         .logo {
             position: relative;
             width: 100%;
             height: 100%;
             margin-top: 0 !important;
+
             &::before {
                 content: '';
                 position: absolute;
@@ -2216,6 +2251,7 @@ textarea {
                 height: 2px;
                 background-color: $gray-light;
             }
+
             &::after {
                 content: '';
                 position: absolute;
@@ -2225,54 +2261,60 @@ textarea {
                 width: 2px;
                 background-color: $gray-light;
             }
-    
+
             img {
                 max-width: 80%;
             }
         }
-       
-    
+
+
         @media (min-width: 992px) {
+
             &:nth-child(4),
             &:last-child {
-             .logo {
-                 &::after {
-                     display: none;
-                 }
-             }
-            }
-             &:nth-child(n+4) {
-                 &::after {
-                     display: none;
-                 }
-               
-             } 
-             &:nth-child(n+5) {
-                 .logo {
-                     &::before {
-                         display: none;
-                     }
-                 }
-             } 
-
-        }
-
-        @media (max-width: 991.98px) {
-            &:nth-child(even){
-                &::after {
-                    display: none;
-                }
                 .logo {
                     &::after {
                         display: none;
                     }
                 }
             }
+
+            &:nth-child(n+4) {
+                &::after {
+                    display: none;
+                }
+
+            }
+
+            &:nth-child(n+5) {
+                .logo {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+
+        }
+
+        @media (max-width: 991.98px) {
+            &:nth-child(even) {
+                &::after {
+                    display: none;
+                }
+
+                .logo {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+
             &:last-child,
             &:nth-last-child(2) {
                 &::after {
                     display: none;
                 }
+
                 .logo {
                     &::before {
                         display: none;
@@ -2282,7 +2324,7 @@ textarea {
         }
 
 
-      
+
     }
 }
 
@@ -2292,54 +2334,63 @@ textarea {
 // Our Services 
 .our-services {
     .nav-pills {
-       .nav-link {
-        box-shadow: 0px 3px 6px #0000001A !important;
-        padding: 1rem;
-        width: 85px;
-        height: 85px;
+        .nav-link {
+            box-shadow: 0px 3px 6px #0000001A !important;
+            padding: 1rem;
+            width: 85px;
+            height: 85px;
 
-        @media (max-width: 991.98px) {
-            width: 65px;
-            height: 65px; 
-            padding: 0.5rem;
-        }
-        &:not(:last-child) {
-            margin-bottom: 1rem;
-        }
-        .icon {
-            width: 80%;
-            margin: auto;
-            
-        @media (max-width: 991.98px) {
-            width: 70%;
-        }
-        }
+            @media (max-width: 991.98px) {
+                width: 65px;
+                height: 65px;
+                padding: 0.5rem;
+            }
 
-        &.active {
-            background-color: $blue;
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
             .icon {
-                filter: brightness(0) invert(1) ;
+                width: 80%;
+                margin: auto;
+
+                @media (max-width: 991.98px) {
+                    width: 70%;
+                }
+            }
+
+            &.active {
+                background-color: $blue;
+
+                .icon {
+                    filter: brightness(0) invert(1);
+                }
             }
         }
-       } 
     }
+
     .tab-content {
         background-color: $offWhite;
+
         .tab-pane {
             height: 100%;
 
             .info {
                 padding: 2.5rem 4rem;
+
                 @media (max-width: 991.98px) {
                     padding: 1.5rem;
                 }
             }
-            .big-icon  {
-               filter: invert(88%) sepia(2%) saturate(553%) hue-rotate(83deg) brightness(121%) contrast(74%);
+
+            .big-icon {
+                filter: invert(88%) sepia(2%) saturate(553%) hue-rotate(83deg) brightness(121%) contrast(74%);
                 opacity: 0.5;
             }
+
             ul {
                 margin-bottom: 0;
+
                 li {
                     @extend .small-description;
                 }
@@ -2350,15 +2401,17 @@ textarea {
 
 // Photo Gallery
 
-.photo-gallery{
+.photo-gallery {
     .swiper-slide {
         .img {
             height: 500px;
+
             @media (max-width: 991.98px) {
                 height: 300px;
             }
         }
     }
+
     .swiper-pagination {
         bottom: 0;
 
@@ -2378,7 +2431,7 @@ textarea {
         #{$end}: auto;
         #{$start}: auto;
         background-color: $white;
-        box-shadow: 0px 3px 6px #0000001a ;
+        box-shadow: 0px 3px 6px #0000001a;
         position: relative;
         top: auto;
 
@@ -2404,6 +2457,7 @@ textarea {
 .custom-label {
     display: block;
 }
+
 .form-control {
     border: none;
     border-radius: 0;
@@ -2414,12 +2468,13 @@ textarea {
 
 .bootstrap-select {
     box-shadow: 0px 3px 6px #00000029;
+
     >.dropdown-toggle {
         padding: 0.6rem 1rem;
         border: none;
         border-radius: 0;
         background-color: $white;
-        
+
         &:focus {
             outline: none !important;
         }
@@ -2438,26 +2493,32 @@ textarea {
     .dropdown-menu {
         border: none;
         border-radius: 0;
-    box-shadow: 0px 3px 6px #00000029;
+        box-shadow: 0px 3px 6px #00000029;
         font-size: inherit;
     }
+
     .btn {
         font-size: inherit;
 
     }
 
-    
+
 }
 
-.bootstrap-select>.dropdown-toggle.bs-placeholder, .bootstrap-select>.dropdown-toggle.bs-placeholder:active, .bootstrap-select>.dropdown-toggle.bs-placeholder:focus, .bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
+.bootstrap-select>.dropdown-toggle.bs-placeholder,
+.bootstrap-select>.dropdown-toggle.bs-placeholder:active,
+.bootstrap-select>.dropdown-toggle.bs-placeholder:focus,
+.bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
     color: $black;
 }
 
-.dropdown-item.active, .dropdown-item:active {
+.dropdown-item.active,
+.dropdown-item:active {
     background-color: $blue;
 }
 
-.dropdown-item:focus, .dropdown-item:hover {
+.dropdown-item:focus,
+.dropdown-item:hover {
     background-color: $offWhite;
     color: $black;
 }
@@ -2465,12 +2526,13 @@ textarea {
 .form-group {
     .bootstrap-select {
         width: 100% !important;
-    } 
+    }
 }
 
 .custom-label {
     margin-bottom: 0.65rem;
 }
+
 .custom-file-input {
     display: none;
 }
@@ -2480,7 +2542,7 @@ textarea {
     color: $white;
     border-radius: 0;
     border: none;
-    padding:  0.6rem 1rem;
+    padding: 0.6rem 1rem;
     cursor: pointer;
 }
 
@@ -2499,10 +2561,11 @@ textarea {
         box-shadow: 0px 0px 20px #00000029;
         padding: 3rem 1.5rem 1.5rem;
         position: relative;
+
         &::before {
             content: '';
             position: absolute;
-            #{$start}:0;
+            #{$start}: 0;
             top: 0;
             width: 70px;
             height: 100px;
@@ -2512,6 +2575,7 @@ textarea {
             background-position: center -35px;
             pointer-events: none;
         }
+
         .image {
             width: 90px;
             height: 90px;
@@ -2519,5 +2583,55 @@ textarea {
             overflow: hidden;
             border-radius: 50%;
         }
+    }
+}
+
+/*** ISO Certificates ***/
+.iso-certificates {
+    .nav-pills {
+        border-bottom: 1px solid $gray;
+        .nav-link {
+            color: $black;
+            position: relative;
+            
+            &::before {
+                content: '';
+                position: absolute;
+                #{$start}:0;
+                bottom: -2px;
+                width: 0%;
+                height: 4px;
+                background-color: $blue;
+                transition: $transitionFast;
+            }
+
+            &.active {
+                background-color: transparent;
+                font-weight: 700;
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .tab-content {
+        .image {
+            width: 80%;
+            margin-#{$start}: auto;
+            border: 2px solid $gray;
+            padding: 1.5rem;
+            height: 300px;
+            overflow: hidden;
+
+            @media (max-width: 991.98px) {
+                width: 60%;
+                margin-#{$end}: auto;
+                margin-#{$start}: 0;
+
+                padding: 0.5rem;
+                height: 200px;
+            }
+        }
+
     }
 }
