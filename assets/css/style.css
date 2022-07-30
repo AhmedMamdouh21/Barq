@@ -1,6 +1,7 @@
 @import url(./bootstrap.min.css);
 @import url(./bootstrap-select.min.css);
 @import url(./swiper-bundle.min.css);
+@import url(./intlTelInput.min.css);
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 /* Transition */
 /* Direction En */
@@ -2352,6 +2353,10 @@ textarea {
 }
 
 /*** Form ***/
+.custom-label {
+  display: block;
+}
+
 .form-control {
   border: none;
   border-radius: 0;
@@ -2431,5 +2436,13 @@ textarea {
   border: none;
   padding: 0.6rem 1rem;
   cursor: pointer;
+}
+
+.iti {
+  width: 100%;
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+  background-color: transparent;
 }
 /*# sourceMappingURL=style.css.map */

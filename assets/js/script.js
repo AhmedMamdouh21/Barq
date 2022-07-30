@@ -412,6 +412,14 @@ if ($(".custom-file-input").length) {
     $(this).parent().find(".custom-file-text").html(text);
   });
 }
+
+if ($("#phone").length) {
+  let input = document.querySelector("#phone");
+  window.intlTelInput(input, {
+    initialCountry: "eg",
+    separateDialCode: true,
+  });
+}
 // });
 
 if ($("html")[0].lang == "ar") {
