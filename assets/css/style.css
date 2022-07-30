@@ -1,6 +1,5 @@
 @import url(./bootstrap.min.css);
-@import url(./select2.min.css);
-@import url(./select2-bootstrap-5-theme.min.css);
+@import url(./bootstrap-select.min.css);
 @import url(./swiper-bundle.min.css);
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 /* Transition */
@@ -2056,6 +2055,12 @@ textarea {
   }
 }
 
+@media (min-width: 992px) {
+  .our-secret .info {
+    text-align: left;
+  }
+}
+
 .our-secret .description {
   color: #4D4D4D;
 }
@@ -2339,5 +2344,92 @@ textarea {
 .photo-gallery .swiper-button-next:hover::after,
 .photo-gallery .swiper-button-prev:hover::after {
   color: #FFFFFF;
+}
+
+/*** Barq Academy ***/
+.barq-academy-apply-now {
+  background-color: #EBEBEB;
+}
+
+/*** Form ***/
+.form-control {
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: 0px 3px 6px #00000029 !important;
+          box-shadow: 0px 3px 6px #00000029 !important;
+  padding: 0.6rem 1rem;
+  font-size: inherit;
+}
+
+.bootstrap-select {
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
+}
+
+.bootstrap-select > .dropdown-toggle {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 0;
+  background-color: #FFFFFF;
+}
+
+.bootstrap-select > .dropdown-toggle:focus {
+  outline: none !important;
+}
+
+.bootstrap-select > .dropdown-toggle::after {
+  border: none;
+  background-image: url("../img/select-arrow.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 14px;
+  height: 14px;
+  background-position: center;
+}
+
+.bootstrap-select .dropdown-menu {
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
+  font-size: inherit;
+}
+
+.bootstrap-select .btn {
+  font-size: inherit;
+}
+
+.bootstrap-select > .dropdown-toggle.bs-placeholder, .bootstrap-select > .dropdown-toggle.bs-placeholder:active, .bootstrap-select > .dropdown-toggle.bs-placeholder:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder:hover {
+  color: #171717;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: #00BBE3;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+  background-color: #EBEBEB;
+  color: #171717;
+}
+
+.form-group .bootstrap-select {
+  width: 100% !important;
+}
+
+.custom-label {
+  margin-bottom: 0.65rem;
+}
+
+.custom-file-input {
+  display: none;
+}
+
+.btn-upload {
+  background-color: #A1ABAC;
+  color: #FFFFFF;
+  border-radius: 0;
+  border: none;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

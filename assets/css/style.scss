@@ -1,6 +1,5 @@
 @import url(./bootstrap.min.css);
-@import url(./select2.min.css);
-@import url(./select2-bootstrap-5-theme.min.css);
+@import url(./bootstrap-select.min.css);
 @import url(./swiper-bundle.min.css);
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 // Color Pallete
@@ -2086,6 +2085,11 @@ textarea {
             }
         }
     }
+    .info {
+        @media (min-width: 992px) {
+         text-align: #{$start};
+        }
+    }
     .description {
         color: $gray-dark;
     }
@@ -2385,4 +2389,99 @@ textarea {
             }
         }
     }
+}
+
+
+/*** Barq Academy ***/
+
+.barq-academy-apply-now {
+    background-color: $offWhite;
+}
+
+/*** Form ***/
+.form-control {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0px 3px 6px #00000029 !important;
+    padding: 0.6rem 1rem;
+    font-size: inherit;
+}
+
+.bootstrap-select {
+    box-shadow: 0px 3px 6px #00000029;
+    >.dropdown-toggle {
+        padding: 0.6rem 1rem;
+        border: none;
+        border-radius: 0;
+        background-color: $white;
+        
+        &:focus {
+            outline: none !important;
+        }
+
+        &::after {
+            border: none;
+            background-image: url('../img/select-arrow.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 14px;
+            height: 14px;
+            background-position: center;
+        }
+    }
+
+    .dropdown-menu {
+        border: none;
+        border-radius: 0;
+    box-shadow: 0px 3px 6px #00000029;
+        font-size: inherit;
+    }
+    .btn {
+        font-size: inherit;
+
+    }
+
+    
+}
+
+.bootstrap-select>.dropdown-toggle.bs-placeholder, .bootstrap-select>.dropdown-toggle.bs-placeholder:active, .bootstrap-select>.dropdown-toggle.bs-placeholder:focus, .bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
+    color: $black;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: $blue;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    background-color: $offWhite;
+    color: $black;
+}
+
+.form-group {
+    .bootstrap-select {
+        width: 100% !important;
+    } 
+}
+
+.custom-label {
+    margin-bottom: 0.65rem;
+}
+
+.custom-file-input {
+    display: none;
+    // position: relative;
+    // z-index: 2;
+    // width: 100%;
+    // height: calc(2.25rem + 2px);
+    // margin: 0;
+    // opacity: 0;
+}
+
+.btn-upload {
+    background-color: $gray;
+    color: $white;
+    border-radius: 0;
+    border: none;
+    padding:  0.6rem 1rem;
+    cursor: pointer;
 }
