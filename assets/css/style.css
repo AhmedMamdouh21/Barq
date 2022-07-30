@@ -2445,4 +2445,34 @@ textarea {
 .iti--separate-dial-code .iti__selected-flag {
   background-color: transparent;
 }
+
+/*** Success Stories ***/
+.success-stories .success-stories-card {
+  -webkit-box-shadow: 0px 0px 20px #00000029;
+          box-shadow: 0px 0px 20px #00000029;
+  padding: 3rem 1.5rem 1.5rem;
+  position: relative;
+}
+
+.success-stories .success-stories-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 70px;
+  height: 100px;
+  background-image: url("../img/quote.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center -35px;
+  pointer-events: none;
+}
+
+.success-stories .success-stories-card .image {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1.5rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
 /*# sourceMappingURL=style.css.map */
