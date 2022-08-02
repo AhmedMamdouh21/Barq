@@ -2530,4 +2530,92 @@ textarea {
     height: 200px;
   }
 }
+
+/*** Partnerships And Vendors ***/
+.partnerships-vendors .partnerships .partnership {
+  height: 160px;
+  border: 6px solid #EBEBEB;
+  padding: 1rem;
+  position: relative;
+  color: #FFFFFF;
+}
+
+.partnerships-vendors .partnerships .partnership::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #00BBE3;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.partnerships-vendors .partnerships .partnership .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: translate(-50%, -50%) translate3d(0, 20px, 0);
+          transform: translate(-50%, -50%) translate3d(0, 20px, 0);
+  opacity: 0;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.partnerships-vendors .partnerships .partnership:hover::before {
+  width: 100%;
+}
+
+.partnerships-vendors .partnerships .partnership:hover .title {
+  -webkit-transform: translate(-50%, -50%) translate3d(0, 0, 0);
+          transform: translate(-50%, -50%) translate3d(0, 0, 0);
+  opacity: 1;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.page-item:not(:first-child) .page-link {
+  margin-left: 0;
+}
+
+.page-item .page-link {
+  color: #171717;
+  padding: .375rem 1rem;
+  border: none;
+  border-radius: 0 !important;
+  margin: 0.35rem;
+}
+
+.page-item .page-link.next, .page-item .page-link.prev {
+  border: 1px solid #00BBE3;
+  color: #00BBE3;
+  margin: 0.35rem 1rem;
+}
+
+.page-item .page-link.next:hover, .page-item .page-link.prev:hover {
+  background-color: #004472;
+  color: #FFFFFF;
+}
+
+.page-item .page-link:focus {
+  color: #171717;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.page-item .page-link:hover {
+  background-color: #EBEBEB;
+}
+
+.page-item .page-link.active {
+  background-color: #00BBE3;
+  color: #FFFFFF;
+}
+
+.page-item.disabled .page-link {
+  border-color: rgba(23, 23, 23, 0.3);
+  color: rgba(23, 23, 23, 0.3);
+}
 /*# sourceMappingURL=style.css.map */
