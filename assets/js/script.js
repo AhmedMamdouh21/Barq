@@ -70,38 +70,6 @@ if ($(".scroll-down")) {
     );
   });
 }
-// Video Model
-
-function playVideo() {
-  function getId(url) {
-    const regExp =
-      /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
-    const match = url.match(regExp);
-
-    return match && match[2].length === 11 ? match[2] : null;
-  }
-  $(".media-videos").on("click", function () {
-    var videosrc = $(this).attr("videosrc");
-    var empededLink = getId(videosrc);
-    $(".videoModal").modal("show");
-
-    $(".videoModal iframe").attr(
-      "src",
-      "https://www.youtube.com/embed/" +
-        empededLink +
-        "?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=1&autoplay=1"
-    );
-    console.log("videosrc", videosrc);
-    console.log("empededLink", empededLink);
-  });
-
-  $(".videoModal").on("hidden.bs.modal", function (e) {
-    $(".videoModal iframe").attr("src", "");
-  });
-}
-if ($(".media-videos").length) {
-  playVideo();
-}
 
 // Counter {
 if ($(".counter").length) {
@@ -419,6 +387,49 @@ if ($("#phone").length) {
     initialCountry: "eg",
     separateDialCode: true,
   });
+}
+
+// Video Model
+
+function playVideo() {
+  // function getId(url) {
+  //   const regExp =
+  //     /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  //   const match = url.match(regExp);
+
+  //   return match && match[2].length === 11 ? match[2] : null;
+  // }
+  $(".media-src").on("click", function () {
+    var videosrc = $(this).attr("videosrc");
+    var imagesrc = $(this).attr("imagesrc");
+    // var empededLink = getId(videosrc);
+    $(".videoModal").modal("show");
+    if (videosrc != null) {
+      $(".videoModal .video video").attr(
+        "src",
+        videosrc +
+          "?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=1&autoplay=1"
+      );
+      $(".videoModal .video").removeClass("d-none");
+      $(".videoModal .image").addClass("d-none");
+    } else {
+      $(".videoModal .image").removeClass("d-none");
+      $(".videoModal .video").addClass("d-none");
+
+      $(".videoModal .image img").attr("src", imagesrc);
+    }
+    console.log("videosrc", videosrc);
+    // console.log("empededLink", empededLink);
+  });
+
+  $(".videoModal").on("hidden.bs.modal", function (e) {
+    $(".videoModal .video video").attr("src", "");
+    $(".videoModal .image img").attr("src", "");
+  });
+}
+
+if ($(".media-src").length) {
+  playVideo();
 }
 // });
 
