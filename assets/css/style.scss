@@ -436,26 +436,7 @@ textarea {
 
 
 
-.title-two-lines {
-    @media (min-width: 1600px) {
-        width: 50%;
-    }
 
-    @media (min-width: 1200px) and (max-width: 1599.98px) {
-        width: 60%;
-
-    }
-
-
-    @media (min-width: 576px) and (max-width: 1199.98px) {
-        width: 45%;
-    }
-
-
-    @media (max-width: 575.98px) {
-        width: 70%;
-    }
-}
 
 .small-description {
     @media (min-width: 1600px) {
@@ -2464,6 +2445,9 @@ textarea {
 }
 
 /*** Form ***/
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 180px;
+}
 .custom-label {
     display: block;
 }
@@ -2555,6 +2539,7 @@ textarea {
     padding: 0.6rem 1rem;
     cursor: pointer;
 }
+
 
 // Mobile 
 .iti {
@@ -2836,4 +2821,181 @@ textarea {
         }
     }
 
+}
+
+
+/*** Latest News ***/
+.latest-news-section {
+.news {
+    .news-card {
+        cursor: pointer;
+        box-shadow: 0px 3px 6px #00000029;
+        text-decoration: none;
+        color: $black;
+        display: block;
+        .image {
+            height: 200px;
+            overflow: hidden;
+            
+            img {
+                transition: $transitionSlow;
+                transform: scale3d(1, 1, 1);
+    
+               
+            }
+        }
+        .info {
+            position: relative;
+            padding: 1rem 1rem 2rem;
+
+            &::before {
+                content: '';
+                position: absolute;
+                #{$start}:0;
+                bottom: 0;
+                width: 1rem;
+                height: 1rem;
+                background-color: $blue;
+                transition: $transitionSlow;
+            }
+            .date,
+            .description {
+                color: $gray-dark;
+            }
+            .hover {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                transition: $transitionFast;
+                opacity: 0;
+                pointer-events: none;
+            }
+        } 
+        &:hover {
+            .image {
+                img {
+                    transform: scale3d(1.2, 1.2, 1.2);
+                }
+            }
+            .info {
+                &::before {
+                    width: 100%;
+                    height: 100%;
+                }
+                .hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+}
+
+.latest-news-details,
+.events-details {
+    .swiper-slide {
+        .img {
+            height: 500px;
+
+            @media (max-width: 991.98px) {
+                height: 300px;
+            }
+        }
+    }
+    .swiper-pagination {
+        bottom: 0;
+
+        .swiper-pagination-bullet {
+            border: 1px solid $gray-light;
+
+            &.swiper-pagination-bullet-active {
+                background-color: $blue;
+                border-color: $blue;
+            }
+        }
+    }
+}
+
+.events-details {
+    .social-media {
+        .icon {
+            svg {
+                width: 25px;
+                height: 25px;
+                fill: $gray;
+                transition: $transitionFast;
+            }
+            &:hover {
+                svg {
+                    fill: $blue;
+                }
+            }
+        }
+    }
+}
+
+.event-location {
+    .map {
+        
+        @media (min-width: 1200px) {
+            height: 65vh;
+        }
+
+        @media (min-width: 768px) and (max-width: 1199.98px) {
+            height: 40vh;
+        }
+
+        @media (max-width: 767.98px) {
+            height: 250px;
+        }
+
+
+    }
+}
+
+.event-agenda {
+    background-color: $blue;
+    color: $white;
+    position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: -4rem;
+            height: 4rem;
+            width: 100%;
+            background-color: $blue;
+            z-index: -1;
+            pointer-events: none;
+        }
+    ol  {
+        list-style: none;
+        counter-reset: my-awesome-counter;
+        @media (min-width: 992px) {
+            column-count: 2;
+        }
+        li {
+            counter-increment: my-awesome-counter;
+            margin-bottom: 1rem;
+            position: relative;
+            &::before {
+                content: counter(my-awesome-counter);
+                background: $white;
+                width: 2rem;
+                height: 2rem;
+                display: inline-block;
+                line-height: 2rem;
+                color: $black;
+                text-align: center;
+                margin-right: 0.5rem;
+              
+              }
+          }
+    }
+}
+
+.registration-form {
+    background-color: $offWhite;
 }
