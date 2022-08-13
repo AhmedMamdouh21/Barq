@@ -3193,3 +3193,183 @@ textarea {
         transform: translateY(-10px);
     }
 }
+
+/*** sustainabilty ***/
+.sustainabilty-section {
+
+    .sustainabilty{
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 20vh;
+            background-color: $offWhite;
+            z-index: -2;
+    
+        }
+    }
+    .container-info {
+        position: relative;
+       
+        .image {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color: $black, $alpha: 0.62);
+            }
+        }
+        .info {
+            min-height: 80vh;
+            color: $white;
+        }
+    }
+
+    .about-sustainabilty,
+    .mission-vision-sustainabilty {
+        background-color: $offWhite;
+    }
+
+    .about-sustainabilty {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: -70px;
+            #{$end}: 5%;
+            width: 150px;
+            height: 150px;
+            background-image: url('../img/sustainabilty-shape.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            @media (max-width: 991.98px) {
+                top: -35px;
+                #{$end}: 0%;
+                width: 70px;
+                height: 70px; 
+            }
+        }
+    }
+    .mission-vision-sustainabilty {
+        .card-wrap {
+            &:nth-child(1) {
+                .mission-vision-card {
+                    background-color: $blue;
+                    color: $white;
+                }
+            }
+            &:nth-child(2) {
+                .mission-vision-card {
+                    background-color: $white;
+                    @media (min-width: 992px) {
+                        margin-top: 3rem;
+                    }
+                }
+              
+            }
+        }
+        .mission-vision-card {
+            padding: 3rem 2rem 0.5rem;
+            border-radius: 20px;
+               
+            
+        }
+    }
+
+    .our-principles {
+        .wrap-our-principles {
+            @media (min-width: 992px) {
+                &:nth-child(odd) {
+                  .start-side {
+                      padding-#{$end}: 4rem; 
+                      height: 70vh;
+                    }
+                    .end-side {
+                        padding-#{$start}: 4rem; 
+                      }
+                  
+              }
+              &:nth-child(even) {
+                  flex-direction: row-reverse;
+                  .start-side {
+                      padding-#{$start}: 4rem; 
+                    }
+                    .end-side {
+                      padding-#{$end}: 4rem; 
+                      }
+                  
+              }
+            }
+        }
+    }
+
+    .how-we-do-it {
+       .card-how-we-do-it {
+        .image {
+            @media (min-width: 992px) {
+                height: 250px;
+            }
+            @media (max-width: 991.98px) {
+                height: 200px;
+            }
+        }
+        .info {
+            background-color: $blue;
+            color: $white;
+            .link {
+                text-decoration: none;
+                color: $white;
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+       } 
+    }
+
+
+    .numbers {
+        .wrap-numbers {
+            &:nth-child(2) {
+                @media (min-width: 992px) {
+                    margin-top: 3rem;
+                }
+            }
+        }
+        .info {
+            position: relative;
+            padding: 3rem 2rem;
+            color: $white;
+            @media (max-width: 991.98px) {
+                padding: 2rem 1.5rem;
+            }
+            .image {
+                position: absolute;
+                inset: 0;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+                pointer-events: none;
+            }
+            .number {
+                border-bottom: 1px solid $white;
+                line-height: 1;
+            }
+        }
+    }
+
+}
+.sustainabilty-form {
+    background-color: $offWhite;
+}

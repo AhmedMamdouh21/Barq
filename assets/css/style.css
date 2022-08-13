@@ -3073,4 +3073,181 @@ textarea {
             transform: translateY(-10px);
   }
 }
+
+/*** sustainabilty ***/
+.sustainabilty-section .sustainabilty {
+  position: relative;
+}
+
+.sustainabilty-section .sustainabilty::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 20vh;
+  background-color: #EBEBEB;
+  z-index: -2;
+}
+
+.sustainabilty-section .container-info {
+  position: relative;
+}
+
+.sustainabilty-section .container-info .image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.sustainabilty-section .container-info .image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 23, 23, 0.62);
+}
+
+.sustainabilty-section .container-info .info {
+  min-height: 80vh;
+  color: #FFFFFF;
+}
+
+.sustainabilty-section .about-sustainabilty,
+.sustainabilty-section .mission-vision-sustainabilty {
+  background-color: #EBEBEB;
+}
+
+.sustainabilty-section .about-sustainabilty {
+  position: relative;
+}
+
+.sustainabilty-section .about-sustainabilty::before {
+  content: '';
+  position: absolute;
+  top: -70px;
+  right: 5%;
+  width: 150px;
+  height: 150px;
+  background-image: url("../img/sustainabilty-shape.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 991.98px) {
+  .sustainabilty-section .about-sustainabilty::before {
+    top: -35px;
+    right: 0%;
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.sustainabilty-section .mission-vision-sustainabilty .card-wrap:nth-child(1) .mission-vision-card {
+  background-color: #00BBE3;
+  color: #FFFFFF;
+}
+
+.sustainabilty-section .mission-vision-sustainabilty .card-wrap:nth-child(2) .mission-vision-card {
+  background-color: #FFFFFF;
+}
+
+@media (min-width: 992px) {
+  .sustainabilty-section .mission-vision-sustainabilty .card-wrap:nth-child(2) .mission-vision-card {
+    margin-top: 3rem;
+  }
+}
+
+.sustainabilty-section .mission-vision-sustainabilty .mission-vision-card {
+  padding: 3rem 2rem 0.5rem;
+  border-radius: 20px;
+}
+
+@media (min-width: 992px) {
+  .sustainabilty-section .our-principles .wrap-our-principles:nth-child(odd) .start-side {
+    padding-right: 4rem;
+    height: 70vh;
+  }
+  .sustainabilty-section .our-principles .wrap-our-principles:nth-child(odd) .end-side {
+    padding-left: 4rem;
+  }
+  .sustainabilty-section .our-principles .wrap-our-principles:nth-child(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .sustainabilty-section .our-principles .wrap-our-principles:nth-child(even) .start-side {
+    padding-left: 4rem;
+  }
+  .sustainabilty-section .our-principles .wrap-our-principles:nth-child(even) .end-side {
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .sustainabilty-section .how-we-do-it .card-how-we-do-it .image {
+    height: 250px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .sustainabilty-section .how-we-do-it .card-how-we-do-it .image {
+    height: 200px;
+  }
+}
+
+.sustainabilty-section .how-we-do-it .card-how-we-do-it .info {
+  background-color: #00BBE3;
+  color: #FFFFFF;
+}
+
+.sustainabilty-section .how-we-do-it .card-how-we-do-it .info .link {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.sustainabilty-section .how-we-do-it .card-how-we-do-it .info .link:hover {
+  color: #FFFFFF;
+}
+
+@media (min-width: 992px) {
+  .sustainabilty-section .numbers .wrap-numbers:nth-child(2) {
+    margin-top: 3rem;
+  }
+}
+
+.sustainabilty-section .numbers .info {
+  position: relative;
+  padding: 3rem 2rem;
+  color: #FFFFFF;
+}
+
+@media (max-width: 991.98px) {
+  .sustainabilty-section .numbers .info {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.sustainabilty-section .numbers .info .image {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.sustainabilty-section .numbers .info .number {
+  border-bottom: 1px solid #FFFFFF;
+  line-height: 1;
+}
+
+.sustainabilty-form {
+  background-color: #EBEBEB;
+}
 /*# sourceMappingURL=style.css.map */
