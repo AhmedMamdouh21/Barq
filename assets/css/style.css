@@ -102,6 +102,10 @@ textarea {
           box-shadow: none !important;
 }
 
+textarea {
+  resize: none;
+}
+
 .btn_main {
   color: #FFFFFF;
   border: none;
@@ -161,6 +165,22 @@ textarea {
 
 .btn_main.outline:hover i {
   color: #00BBE3;
+}
+
+.btn_main.outline.blue {
+  border-color: #00BBE3;
+  background-color: transparent;
+  color: #00BBE3;
+  padding: 0.45rem 1rem;
+}
+
+.btn_main.outline.blue:hover {
+  background-color: #00BBE3;
+  color: #FFFFFF;
+}
+
+.btn_main.outline.blue:hover i {
+  color: #FFFFFF;
 }
 
 .btn_main.underline {
@@ -2870,6 +2890,50 @@ textarea {
 }
 
 .registration-form {
+  background-color: #EBEBEB;
+}
+
+/*** careers ***/
+.careers-section .career .card-career {
+  border: 1px solid #EBEBEB;
+  -webkit-box-shadow: 0px 0px 6px #00000029;
+          box-shadow: 0px 0px 6px #00000029;
+  border-radius: 10px;
+  padding: 1.5rem 2.5rem;
+  position: relative;
+}
+
+.careers-section .career .card-career::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 6px;
+}
+
+.careers-section .career .card-career .location i {
+  font-size: 18px;
+}
+
+.careers-section .career .card-career.blue .title,
+.careers-section .career .card-career.blue .location i {
+  color: #00BBE3;
+}
+
+.careers-section .career .card-career.blue::before {
+  background-color: #00BBE3;
+}
+
+.careers-section .career .card-career.dark .title,
+.careers-section .career .card-career.dark .location i {
+  color: #4D4D4D;
+}
+
+.careers-section .career .card-career.dark::before {
+  background-color: #4D4D4D;
+}
+
+.career-apply-form {
   background-color: #EBEBEB;
 }
 /*# sourceMappingURL=style.css.map */

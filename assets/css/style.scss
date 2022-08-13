@@ -153,7 +153,9 @@ textarea {
     outline: none;
     box-shadow: none !important;
 }
-
+textarea {
+    resize: none;
+  }
 .btn_main {
     color: $white;
     border: none;
@@ -165,7 +167,6 @@ textarea {
     transition: $transitionFast;
     text-transform: uppercase;
     cursor: pointer;
-
     &.white {
         background-color: $white;
         color: $blue-dark;
@@ -204,6 +205,20 @@ textarea {
 
             i {
                 color: $blue;
+            }
+        }
+
+        &.blue {
+            border-color: $blue;
+            background-color: transparent;
+            color: $blue;
+            padding: 0.45rem 1rem;
+            &:hover {
+                background-color: $blue;
+                color: $white;
+                i {
+                    color: $white;
+                }
             }
         }
     }
@@ -2997,5 +3012,56 @@ textarea {
 }
 
 .registration-form {
+    background-color: $offWhite;
+}
+
+/*** careers ***/
+.careers-section  {
+    .career {
+        .card-career {
+            border: 1px solid $offWhite;
+            box-shadow: 0px 0px 6px #00000029;
+            border-radius: 10px;
+            padding: 1.5rem 2.5rem;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                #{$start}:0;
+                height: 100%;
+                width: 6px;
+            }
+
+            .location {
+                i {
+                    font-size: 18px;
+                }
+            }
+
+            &.blue {
+                .title ,
+                .location i{
+                    color: $blue;
+                }
+                &::before {
+                    background-color: $blue;
+                }
+            }
+
+            &.dark {
+                .title ,
+                .location i{
+                    color: $gray-dark;
+                }
+                &::before {
+                    background-color: $gray-dark;
+                }
+            }
+        }
+    }
+}
+
+
+.career-apply-form {
     background-color: $offWhite;
 }
