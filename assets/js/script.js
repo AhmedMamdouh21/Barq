@@ -431,6 +431,81 @@ function playVideo() {
 if ($(".media-src").length) {
   playVideo();
 }
+
+// Clients
+if ($(".clients-section").length) {
+  // Load More Get Data
+  const container = document.querySelector(".more-data");
+  const loading = document.querySelector(".loading-scroll");
+  const data_url = $("#containerLoadMore").attr("data-url");
+  let page_number = 1;
+  let current_index = 0;
+  const items_per_page = 4;
+  let total = 0;
+
+  function loadIteams() {
+    $.ajax({
+      type: "GET",
+      url: data_url,
+      dataType: "json",
+      success: (data) => {
+        current_index = (page_number - 1) * items_per_page;
+        upper_limit_index = current_index + items_per_page - 1;
+        console.log("page_number", page_number);
+        console.log("current_index", current_index);
+        console.log("upper_limit_index", upper_limit_index);
+        total = data.length;
+        console.log("total", total);
+        while (current_index <= upper_limit_index) {
+          console.log("data", data[current_index]);
+          const postElement = document.createElement("div");
+          postElement.classList.add(
+            "col-lg-3",
+            "col-6",
+            "logo-wrap",
+            "px-0",
+            "mb-3"
+          );
+          postElement.innerHTML = `
+
+          <a
+            href="${data[current_index].url}"
+            target="_blank"
+            class="logo py-3 d-flex align-items-center justify-content-center"
+          >
+              <img class="img-fluid" src=" ${data[current_index].img}" alt="${data[current_index].imageTitle}" />
+          </a>
+                    `;
+          container.appendChild(postElement);
+          console.log("data_url", postElement);
+          current_index++;
+          setTimeout(function () {
+            loading.classList.remove("show");
+          }, 200);
+        }
+        page_number++;
+      },
+    });
+  }
+  loadIteams();
+  loadIteams();
+  loadIteams();
+  // loading.classList.remove("show");
+
+  $(".btn-load-more").on("click", function () {
+    if (current_index < total) {
+      loading.classList.add("show");
+      setTimeout(() => {
+        loadIteams();
+      }, 100);
+    } else if (upper_limit_index == total - 1) {
+      setTimeout(function () {
+        loading.classList.remove("show");
+        $(".btn-load-more").addClass("hidden");
+      }, 100);
+    }
+  });
+}
 // });
 
 if ($("html")[0].lang == "ar") {

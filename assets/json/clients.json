@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "img": "assets/img/client-1.png",
+        "imageTitle": "title Image 1",
+        "url":"https://net-wave.net/"
+    },
+    {
+        "id": 2,
+        "img": "assets/img/client-2.png",
+        "imageTitle": "title Image 2",
+        "url":"https://net-wave.net/"
+    }, 
+    {
+        "id": 3,
+        "img": "assets/img/client-3.png",
+        "imageTitle": "title Image 3",
+        "url":"https://net-wave.net/"
+    },
+    {
+        "id": 4,
+        "img": "assets/img/client-4.png",
+        "imageTitle": "title Image 4",
+        "url":"https://net-wave.net/"
+    },
+    {
+        "id": 5,
+        "img": "assets/img/client-5.png",
+        "imageTitle": "title Image 5",
+        "url":"https://net-wave.net/"
+    }, 
+    {
+        "id": 6,
+        "img": "assets/img/client-1.png",
+        "imageTitle": "title Image 6",
+        "url":"https://net-wave.net/"
+    },
+    {
+        "id": 7,
+        "img": "assets/img/client-7.png",
+        "imageTitle": "title Image 7",
+        "url":"https://net-wave.net/"
+    },
+    {
+        "id": 8,
+        "img": "assets/img/client-8.png",
+        "imageTitle": "title Image 8",
+        "url":"https://net-wave.net/"
+    }, 
+    {
+        "id": 9,
+        "img": "assets/img/client-9.png",
+        "imageTitle": "title Image 9",
+        "url":"https://net-wave.net/"
+    },
+    {
+        "id": 10,
+        "img": "assets/img/client-5.png",
+        "imageTitle": "title Image 10",
+        "url":"https://net-wave.net/"
+    },
+    {
+        "id": 11,
+        "img": "assets/img/client-2.png",
+        "imageTitle": "title Image 11",
+        "url":"https://net-wave.net/"
+    }, 
+    {
+        "id": 12,
+        "img": "assets/img/client-3.png",
+        "imageTitle": "title Image 12",
+        "url":"https://net-wave.net/"
+    },
+    {
+        "id": 13,
+        "img": "assets/img/client-1.png",
+        "imageTitle": "title Image 1",
+        "url":"https://net-wave.net/"
+    },
+    {
+        "id": 14,
+        "img": "assets/img/client-2.png",
+        "imageTitle": "title Image 2",
+        "url":"https://net-wave.net/"
+    }, 
+    {
+        "id": 15,
+        "img": "assets/img/client-3.png",
+        "imageTitle": "title Image 3",
+        "url":"https://net-wave.net/"
+    },
+    {
+        "id": 16,
+        "img": "assets/img/client-4.png",
+        "imageTitle": "title Image 4",
+        "url":"https://net-wave.net/"
+    },
+    {
+        "id": 17,
+        "img": "assets/img/client-5.png",
+        "imageTitle": "title Image 5",
+        "url":"https://net-wave.net/"
+    }, 
+    {
+        "id": 18,
+        "img": "assets/img/client-1.png",
+        "imageTitle": "title Image 6",
+        "url":"https://net-wave.net/"
+    },
+    {
+        "id": 19,
+        "img": "assets/img/client-7.png",
+        "imageTitle": "title Image 7",
+        "url":"https://net-wave.net/"
+    },
+    {
+        "id": 20,
+        "img": "assets/img/client-8.png",
+        "imageTitle": "title Image 8",
+        "url":"https://net-wave.net/"
+    }, 
+    {
+        "id": 21,
+        "img": "assets/img/client-9.png",
+        "imageTitle": "title Image 9",
+        "url":"https://net-wave.net/"
+    },
+    {
+        "id": 22,
+        "img": "assets/img/client-5.png",
+        "imageTitle": "title Image 10",
+        "url":"https://net-wave.net/"
+    },
+    {
+        "id": 23,
+        "img": "assets/img/client-2.png",
+        "imageTitle": "title Image 11",
+        "url":"https://net-wave.net/"
+    }, 
+    {
+        "id": 24,
+        "img": "assets/img/client-3.png",
+        "imageTitle": "title Image 12",
+        "url":"https://net-wave.net/"
+    }
+]
