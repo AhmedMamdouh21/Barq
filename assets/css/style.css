@@ -3250,4 +3250,41 @@ textarea {
 .sustainabilty-form {
   background-color: #EBEBEB;
 }
+
+/*** Reach Out ***/
+@media (min-width: 1200px) {
+  .reach-out-section .locations-wrap .location:nth-child(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .reach-out-section .locations-wrap .location {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.reach-out-section .locations-wrap .location .location-info a {
+  color: #171717;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.reach-out-section .locations-wrap .location .location-info a:hover {
+  color: #00BBE3;
+}
+
+.reach-out-section .map {
+  height: 50vh;
+}
+
+.your-feedback {
+  background-color: #EBEBEB;
+}
 /*# sourceMappingURL=style.css.map */

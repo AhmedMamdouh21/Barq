@@ -3373,3 +3373,36 @@ textarea {
 .sustainabilty-form {
     background-color: $offWhite;
 }
+
+/*** Reach Out ***/
+
+.reach-out-section {
+    .locations-wrap {
+        .location {
+           
+
+            &:nth-child(even) {
+               @media (min-width: 1200px) { flex-direction: row-reverse; }
+
+            }
+            @media (max-width: 991.98px) {
+                flex-direction: column-reverse;
+             }
+            .location-info {
+                a {
+                    color: $black;
+                    transition: $transitionFast;
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+    .map {
+        height: 50vh;
+    }
+}
+.your-feedback {
+    background-color:$offWhite;
+}
