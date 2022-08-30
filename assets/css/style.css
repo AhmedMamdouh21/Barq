@@ -1125,33 +1125,36 @@ textarea {
   width: 100%;
   inset: 0;
   background-color: #FFFFFF;
-  -webkit-transition: all 2s ease-in-out;
-  transition: all 2s ease-in-out;
-  -webkit-transform: scale3d(1, 1, 1);
-          transform: scale3d(1, 1, 1);
-  -webkit-transform-origin: center 70%;
-          transform-origin: center 70%;
-}
-
-.welcome-to-barq .welcome-overlay.scale-img {
-  -webkit-transform: scale3d(4, 4, 1);
-          transform: scale3d(4, 4, 1);
+  mix-blend-mode: hard-light;
 }
 
 .welcome-to-barq .welcome-overlay.fade {
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
   opacity: 0;
   pointer-events: none;
 }
 
 .welcome-to-barq .welcome-overlay .section-title {
   color: #171717;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .welcome-to-barq .welcome-overlay .shape {
   position: relative;
   max-width: 250px;
+  -webkit-transition: all 7s ease-in-out;
+  transition: all 7s ease-in-out;
+  -webkit-transform-origin: 80% 70%;
+          transform-origin: 80% 70%;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+}
+
+.welcome-to-barq .welcome-overlay .shape img {
+  mix-blend-mode: hard-light;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .welcome-to-barq .welcome-overlay .shape::after, .welcome-to-barq .welcome-overlay .shape::before {
@@ -1175,6 +1178,15 @@ textarea {
 
 .welcome-to-barq .welcome-overlay .shape::after {
   right: -100%;
+}
+
+.welcome-to-barq .welcome-overlay.scale-img .section-title {
+  opacity: 0;
+}
+
+.welcome-to-barq .welcome-overlay.scale-img .shape {
+  -webkit-transform: scale3d(40, 40, 1);
+          transform: scale3d(40, 40, 1);
 }
 
 .welcome-to-barq.show .info,

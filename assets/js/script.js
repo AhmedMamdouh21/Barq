@@ -83,7 +83,7 @@ if ($(".counter").length) {
       }, 500);
       setTimeout(() => {
         $(".welcome-overlay").addClass("fade");
-      }, 2500);
+      }, 5000);
       setTimeout(() => {
         $(".welcome-to-barq").addClass("show");
         if (!started) {
@@ -93,7 +93,7 @@ if ($(".counter").length) {
           });
         }
         started = true;
-      }, 3000);
+      }, 5500);
     }
     // }
   };
