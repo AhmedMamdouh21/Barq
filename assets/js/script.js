@@ -506,6 +506,22 @@ if ($(".clients-section").length) {
     }
   });
 }
+
+if ($(".who-we-are-list").length) {
+  $(window).scroll(function () {
+    if ($(window).scrollTop() >= 300) {
+      $(".who-we-are-list").addClass("fixed-header");
+      $(".who-we-are-list").css({
+        top: navBarHeight + "px",
+      });
+    } else {
+      $(".who-we-are-list").removeClass("fixed-header");
+      $(".who-we-are-list").css({
+        top: 0 + "px",
+      });
+    }
+  });
+}
 // });
 
 if ($("html")[0].lang == "ar") {

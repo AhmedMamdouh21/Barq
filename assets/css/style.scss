@@ -543,7 +543,7 @@ textarea {
     }
 
     .nav-top {
-        background-color: $offWhite;
+        background-color: $white;
 
         ul {
             li {
@@ -726,7 +726,7 @@ textarea {
                             #{$end}: auto;
                             width: 0%;
                             height: 100%;
-                            background-color: $blue-dark;
+                            background-color: $white;
                             transition: $transitionFast;
                             z-index: -1;
                         }
@@ -734,7 +734,7 @@ textarea {
                         &.active,
                         &:hover {
                             background-color: transparent;
-
+                            color: $black;
                             &::before {
                                 width: 100%;
                             }
@@ -1507,13 +1507,13 @@ textarea {
                     position: absolute;
                     #{$end}: -7.5px;
                     bottom: 0;
-                    height: calc(100% + 15px);
+                    height: calc(100% + 4px);
                     width: 2px;
                     background-color: $gray-light;
                 }
 
                 img {
-                    max-width: 80%;
+                    max-width: 50%;
                 }
             }
 
@@ -1536,7 +1536,7 @@ textarea {
                         position: absolute;
                         #{$start}: 0;
                         bottom: -7.5px;
-                        width: calc(100% + 15px);
+                        width: calc(100% + 4px);
                         height: 2px;
                         background-color: $gray-light;
                     }
@@ -1635,13 +1635,13 @@ textarea {
                     position: absolute;
                     #{$end}: -7.5px;
                     bottom: 0;
-                    height: calc(100% + 15px);
+                    height: calc(100% + 4px);
                     width: 2px;
                     background-color: $gray-light;
                 }
 
                 img {
-                    max-width: 80%;
+                    max-width: 50%;
                 }
             }
 
@@ -1664,7 +1664,7 @@ textarea {
                         position: absolute;
                         #{$start}: 0;
                         bottom: -7.5px;
-                        width: calc(100% + 15px);
+                        width: calc(100% + 4px);
                         height: 2px;
                         background-color: $gray-light;
                     }
@@ -1901,7 +1901,13 @@ textarea {
 .who-we-are-list {
     background-color: $offWhite;
 
-
+    &.fixed-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        z-index: 999;
+    }
     li {
         @media (min-width: 768px) {
             margin-#{$start}: 2rem;
@@ -2282,7 +2288,7 @@ textarea {
             }
 
             img {
-                max-width: 80%;
+                max-width: 50%;
             }
         }
 
@@ -2758,7 +2764,24 @@ textarea {
 }
 
 /*** Media ***/
-
+.image[videosrc] {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        background-image: url('../img/player.svg');
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 60px;
+        height: 60px;
+        border: 2px solid $white;
+        border-radius: 50%;
+    }
+} 
 .media-section {
     .media {
         .image {
@@ -2774,24 +2797,7 @@ textarea {
                 }
             }
         }
-        .image[videosrc] {
-            position: relative;
-            &::after {
-                content: '';
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%,-50%);
-                background-image: url('../img/player.svg');
-                background-size: 70%;
-                background-repeat: no-repeat;
-                background-position: center;
-                width: 60px;
-                height: 60px;
-                border: 2px solid $white;
-                border-radius: 50%;
-            }
-        } 
+        
     }
 }
 
@@ -3123,7 +3129,7 @@ textarea {
             }
 
             img {
-                max-width: 80%;
+                max-width: 50%;
             }
         }
 

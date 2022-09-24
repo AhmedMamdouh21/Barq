@@ -538,7 +538,7 @@ textarea {
 }
 
 .navbar .nav-top {
-  background-color: #EBEBEB;
+  background-color: #FFFFFF;
 }
 
 .navbar .nav-top ul li {
@@ -699,7 +699,7 @@ textarea {
   right: auto;
   width: 0%;
   height: 100%;
-  background-color: #004472;
+  background-color: #FFFFFF;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   z-index: -1;
@@ -707,6 +707,7 @@ textarea {
 
 .navbar .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item.active, .navbar .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
   background-color: transparent;
+  color: #171717;
 }
 
 .navbar .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item.active::before, .navbar .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover::before {
@@ -1485,13 +1486,13 @@ textarea {
   position: absolute;
   right: -7.5px;
   bottom: 0;
-  height: calc(100% + 15px);
+  height: calc(100% + 4px);
   width: 2px;
   background-color: #DEDEDE;
 }
 
 .barq-partners .swiper-barq-partners .swiper-slide .logo img {
-  max-width: 80%;
+  max-width: 50%;
 }
 
 .barq-partners .swiper-barq-partners .swiper-slide:not(:nth-child(even))::after {
@@ -1512,7 +1513,7 @@ textarea {
   position: absolute;
   left: 0;
   bottom: -7.5px;
-  width: calc(100% + 15px);
+  width: calc(100% + 4px);
   height: 2px;
   background-color: #DEDEDE;
 }
@@ -1604,13 +1605,13 @@ textarea {
   position: absolute;
   right: -7.5px;
   bottom: 0;
-  height: calc(100% + 15px);
+  height: calc(100% + 4px);
   width: 2px;
   background-color: #DEDEDE;
 }
 
 .barq-clients .swiper-barq-clients .swiper-slide .logo img {
-  max-width: 80%;
+  max-width: 50%;
 }
 
 .barq-clients .swiper-barq-clients .swiper-slide:not(:nth-child(even))::after {
@@ -1631,7 +1632,7 @@ textarea {
   position: absolute;
   left: 0;
   bottom: -7.5px;
-  width: calc(100% + 15px);
+  width: calc(100% + 4px);
   height: 2px;
   background-color: #DEDEDE;
 }
@@ -1849,6 +1850,14 @@ textarea {
 /*** Who We Are ***/
 .who-we-are-list {
   background-color: #EBEBEB;
+}
+
+.who-we-are-list.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
 @media (min-width: 768px) {
@@ -2224,7 +2233,7 @@ textarea {
 }
 
 .related-partners .logo-wrap .logo img {
-  max-width: 80%;
+  max-width: 50%;
 }
 
 @media (min-width: 992px) {
@@ -2646,6 +2655,27 @@ textarea {
 }
 
 /*** Media ***/
+.image[videosrc] {
+  position: relative;
+}
+
+.image[videosrc]::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-image: url("../img/player.svg");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+}
+
 .media-section .media .image {
   height: 250px;
   overflow: hidden;
@@ -2661,27 +2691,6 @@ textarea {
 .media-section .media .image img:hover {
   -webkit-transform: scale3d(1.2, 1.2, 1.2);
           transform: scale3d(1.2, 1.2, 1.2);
-}
-
-.media-section .media .image[videosrc] {
-  position: relative;
-}
-
-.media-section .media .image[videosrc]::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background-image: url("../img/player.svg");
-  background-size: 70%;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 60px;
-  height: 60px;
-  border: 2px solid #FFFFFF;
-  border-radius: 50%;
 }
 
 /*** Video Modal ***/
@@ -3000,7 +3009,7 @@ textarea {
 }
 
 .clients-section .logo-wrap .logo img {
-  max-width: 80%;
+  max-width: 50%;
 }
 
 @media (min-width: 992px) {
