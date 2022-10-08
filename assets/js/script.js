@@ -297,6 +297,34 @@ if ($(".swiper-photo-gallery").length) {
   });
 }
 
+// Awards & Certificates
+if ($(".awards-certificates").length) {
+  let swiperBarqAwardsCertificates = new Swiper(".swiper-awards-certificates", {
+    spaceBetween: 15,
+    speed: 800,
+    // autoplay: {
+    //   disableOnInteraction: false,
+    //   delay: 5000,
+    // },
+    pagination: {
+      el: ".swiper-awards-certificates .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-awards-certificates .swiper-button-next",
+      prevEl: ".swiper-awards-certificates .swiper-button-prev",
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 4,
+      },
+    },
+  });
+}
+
 if ($("select").length) {
   $("select").selectpicker();
 }
