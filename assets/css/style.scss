@@ -1133,7 +1133,7 @@ textarea {
     position: relative;
     overflow: hidden;
     color: $white;
-
+	min-height: 100vh;
     .bg-image {
         position: absolute;
         inset: 0;
@@ -1195,9 +1195,9 @@ textarea {
         .shape {
             position: relative;
             max-width: 250px;
-            transition: all 7s ease-in-out;
             transform-origin: 80% 70%;
-            transform: scale3d(1, 1, 1);
+            // transition: all 7s ease-in-out;
+            // transform: scale3d(1, 1, 1);
             img {
                 mix-blend-mode: hard-light;
                 background: rgba(0,0,0,0.5);
@@ -3503,4 +3503,21 @@ textarea {
 }
 .your-feedback {
     background-color:$offWhite;
+}
+
+.commonSection {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	padding: 30px;
+	
+	&--grey {
+		background-color: #999;
+	}
+	
+	& > * { margin: auto; }
+}
+
+.product {
+	overflow: hidden;
 }

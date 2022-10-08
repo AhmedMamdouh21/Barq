@@ -76,27 +76,27 @@ if ($(".counter").length) {
   let nums = document.querySelectorAll(".counter .number");
   let sectionCount = document.querySelector(".counter");
   let started = false;
-  window.onscroll = function () {
-    if (window.scrollY >= sectionCount.offsetTop - navBarHeight) {
-      setTimeout(() => {
-        $(".welcome-overlay").addClass("scale-img");
-      }, 500);
-      setTimeout(() => {
-        $(".welcome-overlay").addClass("fade");
-      }, 5000);
-      setTimeout(() => {
-        $(".welcome-to-barq").addClass("show");
-        if (!started) {
-          nums.forEach((num) => {
-            startCount(num);
-            // console.log("num", num);
-          });
-        }
-        started = true;
-      }, 5500);
-    }
-    // }
-  };
+  // window.onscroll = function () {
+  //   if (window.scrollY >= sectionCount.offsetTop - navBarHeight) {
+  //     setTimeout(() => {
+  //       $(".welcome-overlay").addClass("scale-img");
+  //     }, 500);
+  //     setTimeout(() => {
+  //       $(".welcome-overlay").addClass("fade");
+  //     }, 5000);
+  //     setTimeout(() => {
+  //       $(".welcome-to-barq").addClass("show");
+  //       if (!started) {
+  //         nums.forEach((num) => {
+  //           startCount(num);
+  //           // console.log("num", num);
+  //         });
+  //       }
+  //       started = true;
+  //     }, 5500);
+  //   }
+  //   // }
+  // };
 
   function startCount(el) {
     let goal = el.dataset.goal;
@@ -551,6 +551,30 @@ if ($(".who-we-are-list").length) {
   });
 }
 // });
+
+$(function () {
+  // wait for document ready
+
+  var controller = new ScrollMagic.Controller();
+
+  var tween = TweenMax.to(".welcome-overlay .shape", 1, {
+    scale: 40,
+    ease: Linear.easeNone,
+  });
+
+  // build scene
+  var scene = new ScrollMagic.Scene({
+    triggerElement: "#welcomeToBarq",
+    triggerHook: "onLeave",
+    duration: 1500,
+  })
+    .setClassToggle(".welcome-to-barq", "show")
+    .reverse(true)
+    .setTween(tween)
+    .setPin("#welcomeToBarq")
+    // .addIndicators({ name: "INTRO" }) // add indicators (requires plugin)
+    .addTo(controller);
+});
 
 if ($("html")[0].lang == "ar") {
   // alert("ar");

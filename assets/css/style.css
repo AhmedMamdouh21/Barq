@@ -1093,6 +1093,7 @@ textarea {
   position: relative;
   overflow: hidden;
   color: #FFFFFF;
+  min-height: 100vh;
 }
 
 .welcome-to-barq .bg-image {
@@ -1152,12 +1153,8 @@ textarea {
 .welcome-to-barq .welcome-overlay .shape {
   position: relative;
   max-width: 250px;
-  -webkit-transition: all 7s ease-in-out;
-  transition: all 7s ease-in-out;
   -webkit-transform-origin: 80% 70%;
           transform-origin: 80% 70%;
-  -webkit-transform: scale3d(1, 1, 1);
-          transform: scale3d(1, 1, 1);
 }
 
 .welcome-to-barq .welcome-overlay .shape img {
@@ -3354,5 +3351,29 @@ textarea {
 
 .your-feedback {
   background-color: #EBEBEB;
+}
+
+.commonSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  padding: 30px;
+}
+
+.commonSection--grey {
+  background-color: #999;
+}
+
+.commonSection > * {
+  margin: auto;
+}
+
+.product {
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */
