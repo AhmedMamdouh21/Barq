@@ -551,30 +551,31 @@ if ($(".who-we-are-list").length) {
   });
 }
 // });
+if ($("#welcomeToBarq").length) {
+  $(function () {
+    // wait for document ready
 
-$(function () {
-  // wait for document ready
+    var controller = new ScrollMagic.Controller();
 
-  var controller = new ScrollMagic.Controller();
+    var tween = TweenMax.to(".welcome-overlay .shape", 1, {
+      scale: 40,
+      ease: Linear.easeNone,
+    });
 
-  var tween = TweenMax.to(".welcome-overlay .shape", 1, {
-    scale: 40,
-    ease: Linear.easeNone,
+    // build scene
+    var scene = new ScrollMagic.Scene({
+      triggerElement: "#welcomeToBarq",
+      triggerHook: "onLeave",
+      duration: 1500,
+    })
+      .setClassToggle(".welcome-to-barq", "show")
+      .reverse(true)
+      .setTween(tween)
+      .setPin("#welcomeToBarq")
+      // .addIndicators({ name: "INTRO" }) // add indicators (requires plugin)
+      .addTo(controller);
   });
-
-  // build scene
-  var scene = new ScrollMagic.Scene({
-    triggerElement: "#welcomeToBarq",
-    triggerHook: "onLeave",
-    duration: 1500,
-  })
-    .setClassToggle(".welcome-to-barq", "show")
-    .reverse(true)
-    .setTween(tween)
-    .setPin("#welcomeToBarq")
-    // .addIndicators({ name: "INTRO" }) // add indicators (requires plugin)
-    .addTo(controller);
-});
+}
 
 if ($("html")[0].lang == "ar") {
   // alert("ar");
