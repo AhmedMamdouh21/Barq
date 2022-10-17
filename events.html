@@ -16,7 +16,7 @@
     <nav
       class="navbar flex-column navbar-fixed fixed-top navbar-expand-lg py-0"
     >
-      <div class="nav-top d-lg-block d-none w-100 py-2 px-4">
+      <div class="nav-top w-100 py-2 px-4">
         <ul
           class="list-nav mb-0 d-flex align-items-center list-unstyled justify-content-end"
         >
@@ -192,11 +192,12 @@
           <h2 class="large-title fw-normal mb-4 me-4">
             Events <span class="font-bold">Filter</span>
           </h2>
-          <div
+          <form
+            name="filter"
             class="select-group d-flex align-items-center flex-md-nowrap flex-wrap"
           >
             <div class="ms-3 mb-4 text-sm-end">
-              <select class="selectpicker" title="By Year">
+              <select id="test" class="selectpicker" title="By Year">
                 <option>1st name</option>
                 <option>2st name</option>
                 <option>3st name</option>
@@ -223,7 +224,10 @@
                 <option>3st name</option>
               </select>
             </div>
-          </div>
+            <div class="col-auto">
+              <button class="btn_main red px-lg-5" type="submit">Search</button>
+            </div>
+          </form>
         </div>
         <div class="news row">
           <div class="col-lg-4 col-sm-6 mb-4">
@@ -238,8 +242,6 @@
                 <h3 class="small-title font-bold">BARQ Systems | CAIRO ICT</h3>
                 <p class="description small-description mb-0">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  mi mauris, pretium id erat quis, varius fringilla est. Quisque
-                  in lobortis dolor. Suspendisse ultrices sem at aliquam .
                 </p>
                 <div
                   class="hover font-bold d-flex align-items-center justify-content-center flex-column color-white"

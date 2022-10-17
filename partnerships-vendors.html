@@ -16,7 +16,7 @@
     <nav
       class="navbar flex-column navbar-fixed fixed-top navbar-expand-lg py-0"
     >
-      <div class="nav-top d-lg-block d-none w-100 py-2 px-4">
+      <div class="nav-top w-100 py-2 px-4">
         <ul
           class="list-nav mb-0 d-flex align-items-center list-unstyled justify-content-end"
         >
@@ -196,12 +196,22 @@
           <h2 class="large-title fw-normal mb-4 me-4">
             Partnerships <span class="font-bold">Filter</span>
           </h2>
-          <div class="col-md-3 mb-4 text-sm-end">
-            <select class="selectpicker" title="Select Sector">
-              <option>1st name</option>
-              <option>2st name</option>
-              <option>3st name</option>
-            </select>
+          <div
+            class="select-group d-flex align-items-center flex-md-nowrap flex-wrap"
+          >
+            <div class="ms-3 mb-4 text-sm-end">
+              <select class="selectpicker" title="By Country" name="country">
+                <option>All</option>
+                <option>Egypt</option>
+              </select>
+            </div>
+            <div class="ms-3 mb-4 text-sm-end">
+              <select class="selectpicker" title="By Soultion" name="soultion">
+                <option>1st Soultion</option>
+                <option>2st Soultion</option>
+                <option>3st Soultion</option>
+              </select>
+            </div>
           </div>
         </div>
         <div class="partnerships row">

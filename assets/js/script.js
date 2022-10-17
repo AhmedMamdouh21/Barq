@@ -327,6 +327,31 @@ if ($(".awards-certificates").length) {
 
 if ($("select").length) {
   $("select").selectpicker();
+  $("select").on("change", function (e) {
+    let selectedValue = $(this).find("option:selected").val();
+    console.log("selectedValue", selectedValue);
+    let filters = [];
+    let appendUrl = "";
+    $("select ").each(function (event) {
+      console.log("event", event);
+      let name = $(this).attr("name");
+
+      const string = $(this).attr("id");
+      const value = $(this).find("option:selected").val();
+      if (selectedValue) {
+        filters.push(name + "=" + value);
+      }
+    });
+    // window.location.search = filters.join("&");
+    // console.log("filters", filters.join("&"));
+    let currentURL = window.location.href;
+    let afterDomain = currentURL.substring(currentURL.lastIndexOf("/") + 1);
+    let beforeQueryString = afterDomain.split("?")[0];
+    appendUrl = beforeQueryString + "?" + filters.join("&");
+    // console.log("appendUrl", appendUrl);
+    history.pushState({}, null, appendUrl);
+    // console.log("window.location.search", window.location.search);
+  });
 }
 
 /*** Form ***/
@@ -574,6 +599,18 @@ if ($("#welcomeToBarq").length) {
       .setPin("#welcomeToBarq")
       // .addIndicators({ name: "INTRO" }) // add indicators (requires plugin)
       .addTo(controller);
+    let nums = document.querySelectorAll(".counter .number");
+    let started = false;
+    // setTimeout(() => {
+    // $(".welcome-to-barq").addClass("show");
+    if (!started) {
+      nums.forEach((num) => {
+        startCount(num);
+        console.log("num", num);
+      });
+    }
+    started = true;
+    // }, 5500);
   });
 }
 

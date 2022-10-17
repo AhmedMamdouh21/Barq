@@ -122,6 +122,7 @@ body {
                     display: block;
                 }
             }
+            
         }
     }
 
@@ -551,8 +552,12 @@ textarea {
 
     .nav-top {
         background-color: $white;
-
+        
         ul {
+            flex-wrap: wrap;
+            @media (max-width: 991.98px) {
+               justify-content: start !important;
+            }
             li {
                 margin-#{$end}: 0.5rem;
                 margin-#{$start}: 0.5rem;
@@ -575,7 +580,8 @@ textarea {
         @media (max-width: 991.98px) {
             height: 80vh;
             overflow-y: auto;
-            padding-top: 75px;
+            // padding-top: 75px;
+            margin-top: 150px;
         }
 
         .nav-item {
@@ -1301,15 +1307,15 @@ textarea {
         color: $black;
 
         @media (min-width: 992px) {
-            &:nth-child(2) {
+            &:nth-child(4n+2) {
                 margin-top: 60px;
             }
 
-            &:nth-child(3) {
+            &:nth-child(4n+3) {
                 margin-top: 120px;
             }
 
-            &:nth-child(4) {
+            &:nth-child(4n+4) {
                 margin-top: 180px;
             }
         }
@@ -2947,6 +2953,7 @@ textarea {
         text-decoration: none;
         color: $black;
         display: block;
+        height: 100%;
         .image {
             height: 200px;
             overflow: hidden;
@@ -2975,6 +2982,26 @@ textarea {
             .date,
             .description {
                 color: $gray-dark;
+            }
+
+            .small-title {
+                @media (min-width: 1600px) {
+                    font-size: 18px;
+                }
+            
+                @media (min-width: 1200px) and (max-width: 1599.98px) {
+                    font-size: 16px;
+                }
+            
+            
+                @media (min-width: 576px) and (max-width: 1199.98px) {
+                    font-size: 14px;
+                }
+            
+            
+                @media (max-width: 575.98px) {
+                    font-size: 13px;
+                }
             }
             .hover {
                 position: absolute;
@@ -3414,6 +3441,7 @@ textarea {
 
     .how-we-do-it {
        .card-how-we-do-it {
+        margin-bottom: 1.5rem;
         .image {
             @media (min-width: 992px) {
                 height: 250px;
@@ -3439,6 +3467,7 @@ textarea {
 
     .numbers {
         .wrap-numbers {
+            margin-bottom: 1.5rem;
             &:nth-child(2) {
                 @media (min-width: 992px) {
                     margin-top: 3rem;

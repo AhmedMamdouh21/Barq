@@ -548,6 +548,19 @@ textarea {
   background-color: #FFFFFF;
 }
 
+.navbar .nav-top ul {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 991.98px) {
+  .navbar .nav-top ul {
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: start !important;
+  }
+}
+
 .navbar .nav-top ul li {
   margin-right: 0.5rem;
   margin-left: 0.5rem;
@@ -568,7 +581,7 @@ textarea {
   .navbar .navbar-nav {
     height: 80vh;
     overflow-y: auto;
-    padding-top: 75px;
+    margin-top: 150px;
   }
 }
 
@@ -1281,13 +1294,13 @@ textarea {
 }
 
 @media (min-width: 992px) {
-  .services .card-service:nth-child(2) {
+  .services .card-service:nth-child(4n+2) {
     margin-top: 60px;
   }
-  .services .card-service:nth-child(3) {
+  .services .card-service:nth-child(4n+3) {
     margin-top: 120px;
   }
-  .services .card-service:nth-child(4) {
+  .services .card-service:nth-child(4n+4) {
     margin-top: 180px;
   }
 }
@@ -2809,6 +2822,7 @@ textarea {
   text-decoration: none;
   color: #171717;
   display: block;
+  height: 100%;
 }
 
 .latest-news-section .news .news-card .image {
@@ -2843,6 +2857,30 @@ textarea {
 .latest-news-section .news .news-card .info .date,
 .latest-news-section .news .news-card .info .description {
   color: #4D4D4D;
+}
+
+@media (min-width: 1600px) {
+  .latest-news-section .news .news-card .info .small-title {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1599.98px) {
+  .latest-news-section .news .news-card .info .small-title {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 1199.98px) {
+  .latest-news-section .news .news-card .info .small-title {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .latest-news-section .news .news-card .info .small-title {
+    font-size: 13px;
+  }
 }
 
 .latest-news-section .news .news-card .info .hover {
@@ -3254,6 +3292,10 @@ textarea {
   }
 }
 
+.sustainabilty-section .how-we-do-it .card-how-we-do-it {
+  margin-bottom: 1.5rem;
+}
+
 @media (min-width: 992px) {
   .sustainabilty-section .how-we-do-it .card-how-we-do-it .image {
     height: 250px;
@@ -3278,6 +3320,10 @@ textarea {
 
 .sustainabilty-section .how-we-do-it .card-how-we-do-it .info .link:hover {
   color: #FFFFFF;
+}
+
+.sustainabilty-section .numbers .wrap-numbers {
+  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 992px) {
