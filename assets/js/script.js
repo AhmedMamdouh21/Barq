@@ -350,6 +350,7 @@ if ($("select").length) {
     appendUrl = beforeQueryString + "?" + filters.join("&");
     // console.log("appendUrl", appendUrl);
     history.pushState({}, null, appendUrl);
+    location.reload();
     // console.log("window.location.search", window.location.search);
   });
 }
