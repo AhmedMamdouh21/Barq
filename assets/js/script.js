@@ -360,13 +360,6 @@ if ($("select").length) {
 
 if ($("#containerFilter").length) {
   $("#containerFilter").mixItUp();
-  // var checkedValue = $(".inp-cbx:checked").val();
-  // console.log("checkedValue", checkedValue);
-  function handleClick(e) {
-    if (e.checked) {
-      console.log("checked", e.value);
-    }
-  }
 }
 
 /*** Form ***/
