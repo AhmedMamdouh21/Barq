@@ -450,25 +450,25 @@ textarea {
 }
 
 @media (min-width: 1600px) {
-  .small-description, .technologies .card-technologies .info ul li, .our-services .tab-content .tab-pane ul li {
+  .small-description, .technologies .card-technologies .info ul li, .our-services .tab-content .tab-pane ul li, .reach-out-section .map-location .data .location-info a {
     font-size: 15px;
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1599.98px) {
-  .small-description, .technologies .card-technologies .info ul li, .our-services .tab-content .tab-pane ul li {
+  .small-description, .technologies .card-technologies .info ul li, .our-services .tab-content .tab-pane ul li, .reach-out-section .map-location .data .location-info a {
     font-size: 13px;
   }
 }
 
 @media (min-width: 576px) and (max-width: 1199.98px) {
-  .small-description, .technologies .card-technologies .info ul li, .our-services .tab-content .tab-pane ul li {
+  .small-description, .technologies .card-technologies .info ul li, .our-services .tab-content .tab-pane ul li, .reach-out-section .map-location .data .location-info a {
     font-size: 12px;
   }
 }
 
 @media (max-width: 575.98px) {
-  .small-description, .technologies .card-technologies .info ul li, .our-services .tab-content .tab-pane ul li {
+  .small-description, .technologies .card-technologies .info ul li, .our-services .tab-content .tab-pane ul li, .reach-out-section .map-location .data .location-info a {
     font-size: 10px;
   }
 }
@@ -3439,6 +3439,316 @@ textarea {
   height: 50vh;
 }
 
+.reach-out-section .map-location {
+  position: relative;
+}
+
+.reach-out-section .map-location .pins {
+  position: absolute;
+  inline-size: 0;
+  inset: 0;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.reach-out-section .map-location .pins .pin {
+  position: absolute;
+  max-width: 28px;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.reach-out-section .map-location .pins .pin:hover, .reach-out-section .map-location .pins .pin.show {
+  -webkit-filter: invert(50%) sepia(98%) saturate(1609%) hue-rotate(152deg) brightness(99%) contrast(101%);
+          filter: invert(50%) sepia(98%) saturate(1609%) hue-rotate(152deg) brightness(99%) contrast(101%);
+}
+
+@media (min-width: 1600px) {
+  .reach-out-section .map-location .pins .pin.pin-0 {
+    top: 48%;
+    left: 25%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1599.98px) {
+  .reach-out-section .map-location .pins .pin.pin-0 {
+    left: 15%;
+    top: 48%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .reach-out-section .map-location .pins .pin.pin-0 {
+    left: 10%;
+    top: 46%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .reach-out-section .map-location .pins .pin.pin-0 {
+    left: 8%;
+    top: 40%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .reach-out-section .map-location .pins .pin.pin-1 {
+    left: 42%;
+    top: 62%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1599.98px) {
+  .reach-out-section .map-location .pins .pin.pin-1 {
+    left: 37%;
+    top: 62%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .reach-out-section .map-location .pins .pin.pin-1 {
+    left: 37%;
+    top: 58%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .reach-out-section .map-location .pins .pin.pin-1 {
+    left: 35%;
+    top: 52%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .reach-out-section .map-location .pins .pin.pin-2 {
+    left: 53%;
+    top: 60%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1599.98px) {
+  .reach-out-section .map-location .pins .pin.pin-2 {
+    left: 53%;
+    top: 60%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .reach-out-section .map-location .pins .pin.pin-2 {
+    left: 54%;
+    top: 58%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .reach-out-section .map-location .pins .pin.pin-2 {
+    left: 54%;
+    top: 54%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .reach-out-section .map-location .pins .pin.pin-3 {
+    left: 63%;
+    top: 62%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1599.98px) {
+  .reach-out-section .map-location .pins .pin.pin-3 {
+    left: 69%;
+    top: 62%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .reach-out-section .map-location .pins .pin.pin-3 {
+    left: 68%;
+    top: 60%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .reach-out-section .map-location .pins .pin.pin-3 {
+    left: 68%;
+    top: 53%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .reach-out-section .map-location .pins .pin.pin-4 {
+    left: 67%;
+    top: 59%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1599.98px) {
+  .reach-out-section .map-location .pins .pin.pin-4 {
+    left: 73%;
+    top: 59%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .reach-out-section .map-location .pins .pin.pin-4 {
+    left: 76%;
+    top: 56%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .reach-out-section .map-location .pins .pin.pin-4 {
+    left: 78%;
+    top: 53%;
+  }
+}
+
+.reach-out-section .map-location .data {
+  position: absolute;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
+  max-width: 400px;
+  opacity: 0;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 9;
+  pointer-events: none;
+}
+
+@media (max-width: 575.98px) {
+  .reach-out-section .map-location .data {
+    width: 100%;
+    top: 0;
+  }
+}
+
+.reach-out-section .map-location .data.show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  pointer-events: all;
+}
+
+@media (min-width: 1600px) {
+  .reach-out-section .map-location .data.data-0 {
+    top: 6%;
+    left: 14%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1599.98px) {
+  .reach-out-section .map-location .data.data-0 {
+    top: 8%;
+    left: 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .reach-out-section .map-location .data.data-0 {
+    top: 0%;
+    left: 0;
+  }
+}
+
+@media (min-width: 1600px) {
+  .reach-out-section .map-location .data.data-1 {
+    left: 30%;
+    top: 20%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1599.98px) {
+  .reach-out-section .map-location .data.data-1 {
+    left: 23%;
+    top: 22%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .reach-out-section .map-location .data.data-1 {
+    left: 23%;
+    top: 10%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .reach-out-section .map-location .data.data-2 {
+    left: 42%;
+    top: 17%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1599.98px) {
+  .reach-out-section .map-location .data.data-2 {
+    left: 37%;
+    top: 20%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .reach-out-section .map-location .data.data-2 {
+    left: 37%;
+    top: 11%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .reach-out-section .map-location .data.data-3 {
+    left: 52%;
+    top: 17%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1599.98px) {
+  .reach-out-section .map-location .data.data-3 {
+    left: 48%;
+    top: 23%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .reach-out-section .map-location .data.data-3 {
+    left: 37%;
+    top: 12%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .reach-out-section .map-location .data.data-4 {
+    left: 57%;
+    top: 15%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1599.98px) {
+  .reach-out-section .map-location .data.data-4 {
+    left: 57%;
+    top: 20%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .reach-out-section .map-location .data.data-4 {
+    left: 57%;
+    top: 5%;
+  }
+}
+
+.reach-out-section .map-location .data .location-info a {
+  color: #171717;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.reach-out-section .map-location .data .location-info a:hover {
+  color: #00BBE3;
+}
+
 .your-feedback {
   background-color: #EBEBEB;
 }
@@ -3591,7 +3901,12 @@ textarea {
   display: none;
 }
 
-.iti--allow-dropdown input, .iti--allow-dropdown input[type=tel], .iti--allow-dropdown input[type=text], .iti--separate-dial-code input, .iti--separate-dial-code input[type=tel], .iti--separate-dial-code input[type=text] {
+.iti--allow-dropdown input,
+.iti--allow-dropdown input[type=tel],
+.iti--allow-dropdown input[type=text],
+.iti--separate-dial-code input,
+.iti--separate-dial-code input[type=tel],
+.iti--separate-dial-code input[type=text] {
   padding-left: 100px !important;
 }
 /*# sourceMappingURL=style.css.map */

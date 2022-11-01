@@ -473,6 +473,90 @@ if ($(".enquiryFormModal").length) {
   });
 }
 
+// Map
+if ($(".reach-out-section").length) {
+  const data_url = $(".map-location").attr("data-url");
+  // console.log("data_url", data_url);
+  function loadIteams() {
+    let output = "";
+    let outputImage = "";
+    $.ajax({
+      type: "GET",
+      url: data_url,
+      dataType: "json",
+      success: (data) => {
+        $.each(data, function (index, element) {
+          console.log("element", element);
+          output += `
+         
+        <div class="data data-${data[index].id} text-start p-lg-4 p-3">
+          <h2 class="small-title color-blue font-bold">${data[index].country}</h2>
+          <p class="small-description">${data[index].description}</p>
+          <div class="location-info">
+            <div class="address my-lg-3 my-2">
+              <i class="bi bi-geo-alt-fill me-1 color-blue"></i>
+              <span class="font-bold"> Address: </span>
+              <a
+                target="_blank"
+                href="${data[index].location_map}"
+                >${data[index].address}</a
+              >
+            </div>
+
+            <div class="tel my-lg-3 my-2">
+              <i class="bi me-1 color-blue bi-telephone-fill"></i>
+              <span class="font-bold"> Tel: </span>
+              <a href="tel:${data[index].tel}">${data[index].tel}</a>
+            </div>
+            <div class="fax my-lg-3 my-2">
+              <i class="bi me-1 color-blue bi-printer-fill"></i>
+              <span class="font-bold"> Fax: </span>
+              <a href="fax:${data[index].fax}">${data[index].fax}</a>
+            </div>
+            <div class="mail my-lg-3 my-2">
+              <i class="bi me-1 color-blue bi-envelope-fill"></i>
+              <span class="font-bold"> E-mail: </span>
+              <a href="mailto:info${data[index].email}m">${data[index].email}</a>
+            </div>
+            <div class="close-details text-center mt-4">
+              <span class="btn_main blue">Close</span>
+            </div>
+            
+            
+          </div>
+        </div>
+          `;
+          outputImage += `
+          <div class="pin pin-${data[index].id}" data-id="data-${data[index].id}">
+            <img src="assets/img/pin.svg" alt="pin" class="img-fluid" />
+          </div>
+          `;
+        });
+        $(".map-location .pins").append(outputImage);
+        $(".map-location .wrap-info").append(output);
+
+        // Click
+        $(".map-location .pin").on("click", function () {
+          $(".map-location .pin").removeClass("show");
+          $(".map-location .data").removeClass("show");
+          var pinButton = $(this);
+          let pinButtonId = pinButton.data("id");
+          // console.log("pinButton", pinButton);
+          // console.log("pinButtonId", pinButtonId);
+          pinButton.addClass("show");
+          $("." + pinButtonId).addClass("show");
+        });
+
+        $(".map-location .close-details").on("click", function () {
+          $(".map-location .pin").removeClass("show");
+          $(".map-location .data").removeClass("show");
+        });
+      },
+    });
+  }
+  loadIteams();
+}
+
 // Video Model
 
 function playVideo() {
