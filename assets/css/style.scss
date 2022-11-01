@@ -2879,7 +2879,7 @@ textarea {
 .media-src {
     cursor: pointer;
 }
-
+.enquiryFormModal,
 .videoModal {
     .modal-header {
         border: none;
@@ -2931,10 +2931,35 @@ textarea {
 
 }
 
+.enquiryFormModal {
+    .modal-content {
+        background: transparent;
+        border: none;
+        border-radius: 0;
 
+        .modal-body {
+            background-color: $white;
+            @media (min-width: 576px) {
+                max-width: 80vw;
+                height: auto;
+            padding: 3rem;
+
+            }
+
+            @media (max-width: 575.98px) {
+                height: auto;
+            padding: 1.5rem;
+
+            }
+        }
+    }
+}
 // Inner
 .media-inner {
     .card-media-inner{
+        .btn-enquiryForm {
+            cursor: pointer;
+        }
         a {
             &.small-title {
                 color: $blue;
@@ -3662,3 +3687,7 @@ textarea {
   .mix {
     display: none;
   }
+
+  .iti--allow-dropdown input, .iti--allow-dropdown input[type=tel], .iti--allow-dropdown input[type=text], .iti--separate-dial-code input, .iti--separate-dial-code input[type=tel], .iti--separate-dial-code input[type=text] {
+    padding-left: 100px !important;
+}

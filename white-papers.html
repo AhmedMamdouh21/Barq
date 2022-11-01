@@ -192,13 +192,14 @@
           White Papers
         </h1>
         <div class="card-media-inner">
-          <a
-            href="Updated Website comments.pdf"
-            download
-            class="small-title color-blue font-bold mb-3 d-block"
+          <h2
+            data-bs-toggle="modal"
+            data-bs-target="#enquiryForm"
+            data-id="1"
+            class="small-title color-blue font-bold mb-3 d-block btn-enquiryForm"
           >
             Lorem ipsum dolor sit amet
-          </a>
+          </h2>
           <p class="small-description">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -208,7 +209,12 @@
           </p>
         </div>
         <div class="card-media-inner">
-          <h2 class="small-title color-blue font-bold mb-3">
+          <h2
+            data-bs-toggle="modal"
+            data-bs-target="#enquiryForm"
+            data-id="2"
+            class="small-title color-blue font-bold mb-3 d-block btn-enquiryForm"
+          >
             Lorem ipsum dolor sit amet
           </h2>
           <p class="small-description">
@@ -220,7 +226,12 @@
           </p>
         </div>
         <div class="card-media-inner">
-          <h2 class="small-title color-blue font-bold mb-3">
+          <h2
+            data-bs-toggle="modal"
+            data-bs-target="#enquiryForm"
+            data-id="3"
+            class="small-title color-blue font-bold mb-3 d-block btn-enquiryForm"
+          >
             Lorem ipsum dolor sit amet
           </h2>
           <p class="small-description">
@@ -232,7 +243,12 @@
           </p>
         </div>
         <div class="card-media-inner">
-          <h2 class="small-title color-blue font-bold mb-3">
+          <h2
+            data-bs-toggle="modal"
+            data-bs-target="#enquiryForm"
+            data-id="4"
+            class="small-title color-blue font-bold mb-3 d-block btn-enquiryForm"
+          >
             Lorem ipsum dolor sit amet
           </h2>
           <p class="small-description">
@@ -245,6 +261,97 @@
         </div>
       </div>
     </section>
+
+    <!-- Modal -->
+    <div
+      class="modal enquiryFormModal fade"
+      id="enquiryForm"
+      tabindex="-1"
+      aria-labelledby="enquiryFormLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header mb-3">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h2 class="large-title mb-4">Apply Now</h2>
+            <form class="row" action="" id="formSubmit">
+              <input class="input-hidden" type="hidden" value="" />
+              <div class="form-group col-md-6 mb-4">
+                <label class="custom-label"> Full Name: * </label>
+                <input
+                  type="text"
+                  name=""
+                  placeholder="Full Name: *"
+                  class="form-control"
+                  required="required"
+                />
+                <div class="invalid-feedback">Please Enter Full Name.</div>
+                <div class="error-res"></div>
+              </div>
+              <div class="form-group col-md-6 mb-4">
+                <label class="custom-label"> Email:*</label>
+                <input
+                  type="email"
+                  name=""
+                  placeholder="Email:*"
+                  class="form-control"
+                  required="required"
+                />
+                <div class="invalid-feedback">Please Enter Email.</div>
+                <div class="error-res"></div>
+              </div>
+
+              <div class="form-group col-md-6 mb-4">
+                <label class="custom-label"> Company: * </label>
+                <input
+                  type="text"
+                  name=""
+                  placeholder="Company: *"
+                  class="form-control"
+                  required="required"
+                />
+                <div class="invalid-feedback">Please Enter Company.</div>
+                <div class="error-res"></div>
+              </div>
+              <div class="form-group col-md-6 mb-4" id="phone-container">
+                <label class="custom-label"> Mobile * </label>
+                <input
+                  pattern="[0-9]{10,12}"
+                  class="form-control"
+                  type="tel"
+                  id="phone"
+                  required
+                />
+                <div class="invalid-feedback">Please Enter Mobile.</div>
+                <div class="error-res"></div>
+              </div>
+
+              <div class="text-end co1-12">
+                <button type="submit" class="btn_main blue mt-3 px-lg-5">
+                  SUBMIT
+                </button>
+              </div>
+            </form>
+            <div id="showThankYou" class="showThankYou text-center">
+              <div
+                class="message d-flex flex-column align-items-center justify-content-center"
+              >
+                <h2 class="main-title color-blue mb-4">Thank you</h2>
+                <p>Thanks for subscribing to our news letter.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- pagination  -->
     <nav aria-label="Page navigation">
@@ -539,6 +646,7 @@
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap-select.min.js"></script>
+    <script src="assets/js/intlTelInput.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

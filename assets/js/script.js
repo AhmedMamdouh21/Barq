@@ -393,6 +393,11 @@ if ($("#formSubmit").length) {
             $("#formSubmit").slideUp();
             $("#showThankYou").slideDown();
           }, 1000);
+          if (data.status.url) {
+            setTimeout(() => {
+              window.open(data.status.url, "_blank");
+            }, 1200);
+          }
         } else {
           var errors = data.messages;
           for (var i in errors) {
@@ -449,6 +454,22 @@ if ($("#phone").length) {
   window.intlTelInput(input, {
     initialCountry: "eg",
     separateDialCode: true,
+  });
+}
+
+if ($(".enquiryFormModal").length) {
+  $(".enquiryFormModal").on("show.bs.modal", function (event) {
+    var button = $(event.relatedTarget);
+    let id = button.data("id");
+    let modal = $(this);
+    modal.find(".modal-body .input-hidden").val(id);
+  });
+
+  $(".enquiryFormModal").on("hidden.bs.modal", function (e) {
+    $("#formSubmit")[0].reset();
+    $(".enquiryFormModal").find(".modal-body .input-hidden").val("");
+    $("#formSubmit").slideDown();
+    $("#showThankYou").slideUp();
   });
 }
 

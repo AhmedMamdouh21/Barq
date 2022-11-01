@@ -489,7 +489,8 @@ textarea {
   font-weight: 700;
 }
 
-.img-fit, .videoModal .modal-content .modal-body .image img {
+.img-fit, .enquiryFormModal .modal-content .modal-body .image img,
+.videoModal .modal-content .modal-body .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -498,12 +499,14 @@ textarea {
      object-position: center;
 }
 
-.img-fit.contain, .videoModal .modal-content .modal-body .image img.contain {
+.img-fit.contain, .enquiryFormModal .modal-content .modal-body .image img.contain,
+.videoModal .modal-content .modal-body .image img.contain {
   -o-object-fit: contain;
      object-fit: contain;
 }
 
-.img-fit.position-absolute, .videoModal .modal-content .modal-body .image img.position-absolute {
+.img-fit.position-absolute, .enquiryFormModal .modal-content .modal-body .image img.position-absolute,
+.videoModal .modal-content .modal-body .image img.position-absolute {
   width: 100%;
   height: 100%;
   inset: 0;
@@ -2767,10 +2770,12 @@ textarea {
   cursor: pointer;
 }
 
+.enquiryFormModal .modal-header,
 .videoModal .modal-header {
   border: none;
 }
 
+.enquiryFormModal .modal-header .btn-close,
 .videoModal .modal-header .btn-close {
   background-image: url("../img/close-white.svg");
   opacity: 1;
@@ -2778,17 +2783,20 @@ textarea {
   border-radius: 0;
 }
 
+.enquiryFormModal .modal-header .btn-close:hover,
 .videoModal .modal-header .btn-close:hover {
   background-color: #FFFFFF;
   background-image: url("../img/close-blue.svg");
 }
 
 @media (min-width: 576px) {
+  .enquiryFormModal .modal-dialog,
   .videoModal .modal-dialog {
     max-width: 80vw;
   }
 }
 
+.enquiryFormModal .modal-content,
 .videoModal .modal-content {
   background: transparent;
   border: none;
@@ -2796,6 +2804,7 @@ textarea {
 }
 
 @media (min-width: 576px) {
+  .enquiryFormModal .modal-content .modal-body,
   .videoModal .modal-content .modal-body {
     max-width: 80vw;
     height: 80vh;
@@ -2803,9 +2812,39 @@ textarea {
 }
 
 @media (max-width: 575.98px) {
+  .enquiryFormModal .modal-content .modal-body,
   .videoModal .modal-content .modal-body {
     height: 40vh;
   }
+}
+
+.enquiryFormModal .modal-content {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+.enquiryFormModal .modal-content .modal-body {
+  background-color: #FFFFFF;
+}
+
+@media (min-width: 576px) {
+  .enquiryFormModal .modal-content .modal-body {
+    max-width: 80vw;
+    height: auto;
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .enquiryFormModal .modal-content .modal-body {
+    height: auto;
+    padding: 1.5rem;
+  }
+}
+
+.media-inner .card-media-inner .btn-enquiryForm {
+  cursor: pointer;
 }
 
 .media-inner .card-media-inner a.small-title {
@@ -3550,5 +3589,9 @@ textarea {
 
 .mix {
   display: none;
+}
+
+.iti--allow-dropdown input, .iti--allow-dropdown input[type=tel], .iti--allow-dropdown input[type=text], .iti--separate-dial-code input, .iti--separate-dial-code input[type=tel], .iti--separate-dial-code input[type=text] {
+  padding-left: 100px !important;
 }
 /*# sourceMappingURL=style.css.map */
