@@ -724,7 +724,7 @@ textarea {
                     }
 
                     .dropdown-item {
-                        color: $black;
+                        color: $white;
                         transition: $transitionFast;
                         position: relative;
 
@@ -2935,6 +2935,15 @@ textarea {
 // Inner
 .media-inner {
     .card-media-inner{
+        a {
+            &.small-title {
+                color: $blue;
+                text-decoration: none;
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
         &:not(:last-child) {
             border-bottom: 1px solid $gray-light;
             margin-bottom: 2rem;
@@ -3467,8 +3476,8 @@ textarea {
 
     .numbers {
         .wrap-numbers {
-            margin-bottom: 1.5rem;
-            &:nth-child(2) {
+            // margin-bottom: 1.5rem;
+            &:nth-child(3n + 2) {
                 @media (min-width: 992px) {
                     margin-top: 3rem;
                 }
@@ -3550,3 +3559,106 @@ textarea {
 .product {
 	overflow: hidden;
 }
+
+.showThankYou {
+    background-color: $white;
+    padding: 3rem;
+    display: none;
+    .message {
+        min-height: 50vh;
+
+    }
+}
+
+// checkBox
+.cbx {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    // margin-bottom: 1.5rem;
+  }
+  .cbx:not(:last-child) {
+    margin-right: 6px;
+  }
+  .cbx:hover {
+    background: rgba(0,119,255,0.06);
+  }
+  .cbx span {
+    float: left;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0);
+  }
+  .cbx span:first-child {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    border: 1px solid $black;
+    transition: all 0.2s ease;
+  }
+  .cbx span:last-child {
+    padding-left: 8px;
+    line-height: 18px;
+  }
+  .cbx:hover span:first-child {
+    border-color: $blue;
+  }
+  .inp-cbx {
+    position: absolute;
+    visibility: hidden;
+  }
+  .inp-cbx:checked + .cbx span:first-child {
+    background: $blue;
+    border-color: $blue;
+    // animation: wave 0.4s ease;
+  }
+
+  .inp-cbx:checked + .cbx span:last-child {
+    color: $blue;
+    text-decoration: underline;
+  }
+
+  .btn-filter {
+    background-color: transparent;
+    border: none;
+    transition: $transitionFast;
+    position: relative;
+    padding-left: 26px;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        border: 1px solid $black;
+        transition: $transitionFast;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+    &.active {
+        color: $blue;
+        text-decoration: underline;
+        &::before {
+            background-color: $blue;
+            border: 2px solid $white;
+            box-shadow: 0px 0px 0px 2px $blue;
+        }
+    }
+  }
+
+  .mix,
+  .gap {
+      display: inline-block;
+      width: 100%;
+  }
+
+  .mix {
+    display: none;
+  }

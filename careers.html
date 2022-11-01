@@ -195,6 +195,23 @@
           <div
             class="select-group d-flex align-items-center flex-md-nowrap flex-wrap"
           >
+            <!-- Start 01_11_2022 -->
+            <button class="filter ms-3 mb-4 btn-filter" data-filter="all">
+              All
+            </button>
+            <button
+              class="filter ms-3 mb-4 btn-filter"
+              data-filter=".vacancies"
+            >
+              vacancies
+            </button>
+            <button
+              class="filter ms-3 mb-4 btn-filter"
+              data-filter=".internship"
+            >
+              internship
+            </button>
+            <!-- End 01_11_2022 -->
             <div class="ms-3 mb-4 text-sm-end">
               <select class="selectpicker" title="All Types">
                 <option>1st name</option>
@@ -218,77 +235,86 @@
             </div>
           </div>
         </div>
-        <div class="career">
-          <!-- Add Class => blue -->
-          <div
-            class="card-career d-flex justify-content-between align-items-center flex-md-nowrap flex-wrap mb-4 blue"
-          >
-            <div class="info">
-              <h2 class="title small-title font-bold">
-                Senior Software Engineer Riyadh Branch
-              </h2>
-              <p class="small-description">
-                Opening Date 25-5-2022 Closing Date 15-6-2022
-              </p>
-              <div class="location">
-                <i class="bi bi-geo-alt-fill me-1"></i>
-                Riyadh Branch
+        <!-- Start 01_11_2022 -->
+
+        <div id="containerFilter" class="career">
+          <div class="mix vacancies">
+            <!-- Add Class => blue -->
+            <div
+              class="card-career d-flex justify-content-between align-items-center flex-md-nowrap flex-wrap mb-4 blue"
+            >
+              <div class="info">
+                <h2 class="title small-title font-bold">
+                  Senior Software Engineer Riyadh Branch
+                </h2>
+                <p class="small-description">
+                  Opening Date 25-5-2022 Closing Date 15-6-2022
+                </p>
+                <div class="location">
+                  <i class="bi bi-geo-alt-fill me-1"></i>
+                  Riyadh Branch
+                </div>
               </div>
-            </div>
-            <div class="details mt-md-0 mt-3">
-              <a href="career-details.html" class="btn_main blue outline">
-                MORE DETAILS
-                <i class="bi bi-chevron-double-right ms-1"></i>
-              </a>
+              <div class="details mt-md-0 mt-3">
+                <a href="career-details.html" class="btn_main blue outline">
+                  MORE DETAILS
+                  <i class="bi bi-chevron-double-right ms-1"></i>
+                </a>
+              </div>
             </div>
           </div>
-          <!-- Add Class => blue -->
-          <div
-            class="card-career d-flex justify-content-between align-items-center flex-md-nowrap flex-wrap mb-4 blue"
-          >
-            <div class="info">
-              <h2 class="title small-title font-bold">
-                Senior Software Engineer Riyadh Branch
-              </h2>
-              <p class="small-description">
-                Opening Date 25-5-2022 Closing Date 15-6-2022
-              </p>
-              <div class="location">
-                <i class="bi bi-geo-alt-fill me-1"></i>
-                Riyadh Branch
+          <div class="mix vacancies">
+            <!-- Add Class => blue -->
+            <div
+              class="card-career d-flex justify-content-between align-items-center flex-md-nowrap flex-wrap mb-4 blue"
+            >
+              <div class="info">
+                <h2 class="title small-title font-bold">
+                  Senior Software Engineer Riyadh Branch
+                </h2>
+                <p class="small-description">
+                  Opening Date 25-5-2022 Closing Date 15-6-2022
+                </p>
+                <div class="location">
+                  <i class="bi bi-geo-alt-fill me-1"></i>
+                  Riyadh Branch
+                </div>
               </div>
-            </div>
-            <div class="details mt-md-0 mt-3">
-              <a href="career-details.html" class="btn_main blue outline">
-                MORE DETAILS
-                <i class="bi bi-chevron-double-right ms-1"></i>
-              </a>
+              <div class="details mt-md-0 mt-3">
+                <a href="career-details.html" class="btn_main blue outline">
+                  MORE DETAILS
+                  <i class="bi bi-chevron-double-right ms-1"></i>
+                </a>
+              </div>
             </div>
           </div>
-          <!-- Add Class => dark -->
-          <div
-            class="card-career d-flex justify-content-between align-items-center flex-md-nowrap flex-wrap mb-4 dark"
-          >
-            <div class="info">
-              <h2 class="title small-title font-bold">
-                Software Engineer Internship Riyadh Branch
-              </h2>
-              <p class="small-description">
-                Opening Date 25-5-2022 Closing Date 15-6-2022
-              </p>
-              <div class="location">
-                <i class="bi bi-geo-alt-fill me-1"></i>
-                Riyadh Branch
+          <div class="mix internship">
+            <!-- Add Class => dark -->
+            <div
+              class="card-career d-flex justify-content-between align-items-center flex-md-nowrap flex-wrap mb-4 dark"
+            >
+              <div class="info">
+                <h2 class="title small-title font-bold">
+                  Software Engineer Internship Riyadh Branch
+                </h2>
+                <p class="small-description">
+                  Opening Date 25-5-2022 Closing Date 15-6-2022
+                </p>
+                <div class="location">
+                  <i class="bi bi-geo-alt-fill me-1"></i>
+                  Riyadh Branch
+                </div>
               </div>
-            </div>
-            <div class="details mt-md-0 mt-3">
-              <a href="career-details.html" class="btn_main blue outline">
-                MORE DETAILS
-                <i class="bi bi-chevron-double-right ms-1"></i>
-              </a>
+              <div class="details mt-md-0 mt-3">
+                <a href="career-details.html" class="btn_main blue outline">
+                  MORE DETAILS
+                  <i class="bi bi-chevron-double-right ms-1"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
+        <!-- End 01_11_2022 -->
       </div>
     </section>
 
@@ -564,6 +590,9 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
+    <!-- Start 01_11_2022 -->
+    <script src="assets/js/jquery.mixitup.min.js"></script>
+    <!-- End 01_11_2022 -->
     <script src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
