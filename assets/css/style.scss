@@ -734,6 +734,7 @@ textarea {
 
                     .dropdown-item {
                         color: $white;
+                        background-color: #00a8cc;
                         transition: $transitionFast;
                         position: relative;
 
@@ -748,14 +749,14 @@ textarea {
                             #{$end}: auto;
                             width: 0%;
                             height: 100%;
-                            background-color: $black;
+                            background-color: $blue;
                             transition: $transitionFast;
                             z-index: -1;
                         }
 
                         &.active,
                         &:hover {
-                            background-color: transparent;
+                            background-color: $blue;
                             color: $white;
 
                             &::before {
