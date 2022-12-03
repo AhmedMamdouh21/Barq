@@ -330,7 +330,7 @@ if ($(".awards-certificates").length) {
 
 if ($("select").length) {
   $("select").selectpicker();
-  $("select").on("change", function (e) {
+  $(".select-filter").on("change", function (e) {
     let selectedValue = $(this).find("option:selected").val();
     console.log("selectedValue", selectedValue);
     let filters = [];
