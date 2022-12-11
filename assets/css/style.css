@@ -1391,7 +1391,7 @@ textarea {
   bottom: 0;
   width: 100%;
   height: 25px;
-  background-color: #EBEBEB;
+  background-color: #FFFFFF;
 }
 
 .container-latest-news .latest-news {
@@ -1463,11 +1463,13 @@ textarea {
   top: auto;
   bottom: 0;
   background-color: #FFFFFF;
+  border: 1px solid #DEDEDE;
 }
 
 .container-latest-news .latest-news .latest-news-swiper .swiper-button-next:hover,
 .container-latest-news .latest-news .latest-news-swiper .swiper-button-prev:hover {
   background-color: #007AA8;
+  border: 1px solid #007AA8;
 }
 
 .container-latest-news .latest-news .latest-news-swiper .swiper-button-next:hover::after,
@@ -1481,10 +1483,6 @@ textarea {
 }
 
 /*** BARQ Partners ***/
-.barq-partners {
-  background-color: #EBEBEB;
-}
-
 .barq-partners .swiper-barq-partners {
   height: 400px;
   padding-bottom: 5rem;
@@ -1560,7 +1558,7 @@ textarea {
 .barq-partners .swiper-barq-partners .swiper-button-next,
 .barq-partners .swiper-barq-partners .swiper-button-prev {
   top: calc(50% - 2.8rem);
-  background-color: #EBEBEB;
+  background-color: #FFFFFF;
   border: 2px solid #DEDEDE;
 }
 
@@ -3032,18 +3030,15 @@ textarea {
   counter-increment: my-awesome-counter;
   margin-bottom: 1rem;
   position: relative;
+  padding-left: 20px;
 }
 
 .event-agenda ol li::before {
-  content: counter(my-awesome-counter);
-  background: #FFFFFF;
-  width: 2rem;
-  height: 2rem;
-  display: inline-block;
-  line-height: 2rem;
-  color: #171717;
-  text-align: center;
-  margin-right: 0.5rem;
+  content: "\25BA \0020";
+  font-size: 10px;
+  position: absolute;
+  top: 5px;
+  left: 0px;
 }
 
 .registration-form {
