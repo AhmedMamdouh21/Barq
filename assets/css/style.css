@@ -703,8 +703,8 @@ textarea {
 }
 
 .navbar .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item {
-  color: #FFFFFF;
-  background-color: #00a8cc;
+  color: #00BBE3;
+  background-color: #FFFFFF;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   position: relative;
@@ -1172,6 +1172,10 @@ textarea {
   max-width: 250px;
   -webkit-transform-origin: 80% 70%;
           transform-origin: 80% 70%;
+  -webkit-transition: all 7s ease-in-out;
+  transition: all 7s ease-in-out;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
 }
 
 .welcome-to-barq .welcome-overlay .shape img {
@@ -3484,118 +3488,146 @@ textarea {
 
 @media (max-width: 575.98px) {
   .reach-out-section .map-location .pins .pin.pin-0 {
-    left: 8%;
+    left: 3%;
     top: 40%;
   }
 }
 
 @media (min-width: 1600px) {
   .reach-out-section .map-location .pins .pin.pin-1 {
+    top: 40%;
+    left: 28%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1599.98px) {
+  .reach-out-section .map-location .pins .pin.pin-1 {
+    left: 18%;
+    top: 40%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .reach-out-section .map-location .pins .pin.pin-1 {
+    left: 10%;
+    top: 38%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .reach-out-section .map-location .pins .pin.pin-1 {
+    left: 13%;
+    top: 35%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .reach-out-section .map-location .pins .pin.pin-2 {
     left: 42%;
     top: 62%;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1599.98px) {
-  .reach-out-section .map-location .pins .pin.pin-1 {
+  .reach-out-section .map-location .pins .pin.pin-2 {
     left: 37%;
     top: 62%;
   }
 }
 
 @media (min-width: 576px) and (max-width: 991.98px) {
-  .reach-out-section .map-location .pins .pin.pin-1 {
+  .reach-out-section .map-location .pins .pin.pin-2 {
     left: 37%;
     top: 58%;
   }
 }
 
 @media (max-width: 575.98px) {
-  .reach-out-section .map-location .pins .pin.pin-1 {
+  .reach-out-section .map-location .pins .pin.pin-2 {
     left: 35%;
     top: 52%;
   }
 }
 
 @media (min-width: 1600px) {
-  .reach-out-section .map-location .pins .pin.pin-2 {
+  .reach-out-section .map-location .pins .pin.pin-3 {
     left: 53%;
     top: 60%;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1599.98px) {
-  .reach-out-section .map-location .pins .pin.pin-2 {
+  .reach-out-section .map-location .pins .pin.pin-3 {
     left: 53%;
     top: 60%;
   }
 }
 
 @media (min-width: 576px) and (max-width: 991.98px) {
-  .reach-out-section .map-location .pins .pin.pin-2 {
+  .reach-out-section .map-location .pins .pin.pin-3 {
     left: 54%;
     top: 58%;
   }
 }
 
 @media (max-width: 575.98px) {
-  .reach-out-section .map-location .pins .pin.pin-2 {
+  .reach-out-section .map-location .pins .pin.pin-3 {
     left: 54%;
     top: 54%;
   }
 }
 
 @media (min-width: 1600px) {
-  .reach-out-section .map-location .pins .pin.pin-3 {
+  .reach-out-section .map-location .pins .pin.pin-4 {
     left: 63%;
     top: 62%;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1599.98px) {
-  .reach-out-section .map-location .pins .pin.pin-3 {
+  .reach-out-section .map-location .pins .pin.pin-4 {
     left: 69%;
     top: 62%;
   }
 }
 
 @media (min-width: 576px) and (max-width: 991.98px) {
-  .reach-out-section .map-location .pins .pin.pin-3 {
+  .reach-out-section .map-location .pins .pin.pin-4 {
     left: 68%;
     top: 60%;
   }
 }
 
 @media (max-width: 575.98px) {
-  .reach-out-section .map-location .pins .pin.pin-3 {
+  .reach-out-section .map-location .pins .pin.pin-4 {
     left: 68%;
     top: 53%;
   }
 }
 
 @media (min-width: 1600px) {
-  .reach-out-section .map-location .pins .pin.pin-4 {
+  .reach-out-section .map-location .pins .pin.pin-5 {
     left: 67%;
     top: 59%;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1599.98px) {
-  .reach-out-section .map-location .pins .pin.pin-4 {
+  .reach-out-section .map-location .pins .pin.pin-5 {
     left: 73%;
     top: 59%;
   }
 }
 
 @media (min-width: 576px) and (max-width: 991.98px) {
-  .reach-out-section .map-location .pins .pin.pin-4 {
+  .reach-out-section .map-location .pins .pin.pin-5 {
     left: 76%;
     top: 56%;
   }
 }
 
 @media (max-width: 575.98px) {
-  .reach-out-section .map-location .pins .pin.pin-4 {
+  .reach-out-section .map-location .pins .pin.pin-5 {
     left: 78%;
     top: 53%;
   }
@@ -3904,5 +3936,9 @@ textarea {
 .iti--separate-dial-code input[type=tel],
 .iti--separate-dial-code input[type=text] {
   padding-left: 100px !important;
+}
+
+.img-float {
+  float: right;
 }
 /*# sourceMappingURL=style.css.map */

@@ -733,8 +733,8 @@ textarea {
                     }
 
                     .dropdown-item {
-                        color: $white;
-                        background-color: #00a8cc;
+                        color: $blue;
+                        background-color: $white;
                         transition: $transitionFast;
                         position: relative;
 
@@ -1215,8 +1215,8 @@ textarea {
             max-width: 250px;
             transform-origin: 80% 70%;
 
-            // transition: all 7s ease-in-out;
-            // transform: scale3d(1, 1, 1);
+            transition: all 7s ease-in-out;
+            transform: scale3d(1, 1, 1);
             img {
                 mix-blend-mode: hard-light;
                 background: rgba(0, 0, 0, 0.5);
@@ -3676,12 +3676,33 @@ textarea {
                         top: 46%;
                     }
                     @media (max-width: 575.98px) {
-                        left: 8%;
+                        left: 3%;
                         top: 40%;
                      }
                 }
 
                 &.pin-1 {
+                    @media (min-width: 1600px) {
+                        top: 40%;
+                        left: 28%;
+                    }
+
+                    @media (min-width: 992px) and (max-width: 1599.98px) {
+                        left: 18%;
+                        top: 40%;
+                    }
+
+                    @media (min-width: 576px) and (max-width: 991.98px) {
+                        left: 10%;
+                        top: 38%;
+                    }
+                    @media (max-width: 575.98px) {
+                        left: 13%;
+                        top: 35%;
+                     }
+                }
+
+                &.pin-2 {
                     @media (min-width: 1600px) {
                         left: 42%;
                         top: 62%;
@@ -3701,7 +3722,7 @@ textarea {
                      }
                 }
 
-                &.pin-2 {
+                &.pin-3 {
                     @media (min-width: 1600px) {
                         left: 53%;
                         top: 60%;
@@ -3721,7 +3742,7 @@ textarea {
                      }
                 }
 
-                &.pin-3 {
+                &.pin-4 {
                     @media (min-width: 1600px) {
                         left: 63%;
                         top: 62%;
@@ -3741,7 +3762,7 @@ textarea {
                      }
                 }
 
-                &.pin-4 {
+                &.pin-5 {
                     @media (min-width: 1600px) {
                         left: 67%;
                         top: 59%;
@@ -4030,4 +4051,8 @@ textarea {
 .iti--separate-dial-code input[type=tel],
 .iti--separate-dial-code input[type=text] {
     padding-left: 100px !important;
+}
+
+.img-float {
+    float: right;
 }

@@ -48,5 +48,15 @@
         "tel":"+2 02 2522 9222",
         "fax":"+2 02 2522 9223",
         "email":"info@barqsystems.com"
+    },
+    {
+        "id": 5,
+        "country":"Egypt 5",
+        "description":"Egypt 5 Headquarters",
+        "address":"MB4 Building, Maadi Technology Park, Maadi, Cairo 11435, Egypt",
+        "location_map":"https://www.google.com/maps/place/%D8%A7%D9%84%D9%82%D8%B1%D9%8A%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D9%8A%D8%A9+%D8%A8%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D8%AF%D9%89%E2%80%AD/@29.9712778,31.2852249,17z/data=!3m1!4b1!4m5!3m4!1s0x1458392ea54336d7:0x112095711b275531!8m2!3d29.9712732!4d31.2830362",
+        "tel":"+2 02 2522 9222",
+        "fax":"+2 02 2522 9223",
+        "email":"info@barqsystems.com"
     }
 ]
