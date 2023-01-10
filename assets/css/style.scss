@@ -4056,3 +4056,28 @@ textarea {
 .img-float {
     float: right;
 }
+
+
+.searchResults {
+    .search-result {
+            text-decoration: none;
+            color: $black;
+            &:not(:last-child) {
+                border-bottom: 2px solid $gray-light;
+                padding-bottom: 1rem;
+                margin-bottom: 1rem;
+                @media (min-width: 1200px){
+                    padding-bottom: 3rem;
+                    margin-bottom: 3rem;
+                }
+            }
+            .medium-title {
+                transition: $transitionFast;
+            }
+            &:hover {
+                .medium-title {
+                    color: $blue;
+                }
+            }
+    }
+}
