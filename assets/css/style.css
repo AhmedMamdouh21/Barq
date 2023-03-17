@@ -1122,6 +1122,13 @@ textarea {
   mix-blend-mode: multiply;
 }
 
+.welcome-to-barq .bg-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(23, 23, 23, 0.5);
+}
+
 .welcome-to-barq .info,
 .welcome-to-barq .count {
   -webkit-transition: all 0.6s ease-in-out;

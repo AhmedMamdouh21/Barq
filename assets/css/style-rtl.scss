@@ -1133,7 +1133,12 @@ textarea {
         height: 100%;
         z-index: -1;
         mix-blend-mode: multiply;
-
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgba($color: $black, $alpha: 0.5);
+        }
     }
 
     .info,
