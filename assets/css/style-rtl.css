@@ -1077,7 +1077,7 @@ textarea {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 68, 114, 0.9);
+  background-color: rgba(0, 68, 114, 0.2);
 }
 
 /*** Welcome to BARQ ***/
@@ -3209,6 +3209,12 @@ textarea {
 }
 
 @media (min-width: 992px) {
+  .sustainabilty-section .how-we-do-it .card-how-we-do-it {
+    height: 100%;
+  }
+}
+
+@media (min-width: 992px) {
   .sustainabilty-section .how-we-do-it .card-how-we-do-it .image {
     height: 250px;
   }
@@ -3223,6 +3229,12 @@ textarea {
 .sustainabilty-section .how-we-do-it .card-how-we-do-it .info {
   background-color: #00BBE3;
   color: #FFFFFF;
+}
+
+@media (min-width: 992px) {
+  .sustainabilty-section .how-we-do-it .card-how-we-do-it .info {
+    height: calc(100% - 250px);
+  }
 }
 
 .sustainabilty-section .how-we-do-it .card-how-we-do-it .info .link {

@@ -1139,7 +1139,7 @@ textarea {
             #{$end}: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba($color: $blue-dark, $alpha: 0.9);
+            background-color: rgba($color: $blue-dark, $alpha: 0.5);
         }
 
     }
@@ -3537,8 +3537,10 @@ textarea {
 
     .how-we-do-it {
         .card-how-we-do-it {
-            margin-bottom: 1.5rem;
-
+            // margin-bottom: 1.5rem;
+            @media (min-width: 992px) {
+                height: 100%;
+            }
             .image {
                 @media (min-width: 992px) {
                     height: 250px;
@@ -3552,7 +3554,10 @@ textarea {
             .info {
                 background-color: $blue;
                 color: $white;
+                @media (min-width: 992px) {
+                    height: calc(100% - 250px);
 
+                }
                 .link {
                     text-decoration: none;
                     color: $white;
@@ -3815,32 +3820,32 @@ textarea {
 
                 @media (min-width: 1600px) {
                     top: 6%;
-                    left: 14%;
+                    #{$start}: 14%;
                 }
 
                 @media (min-width: 992px) and (max-width: 1599.98px) {
                     top: 8%;
-                    left: 0;
+                    #{$start}: 0;
                 }
                 @media (min-width: 576px) and (max-width: 991.98px) {
                     top: 0%;
-                    left: 0;
+                    #{$start}: 0;
                 }
             }
 
             &.data-1 {
 
                 @media (min-width: 1600px) {
-                    left: 30%;
+                    #{$start}: 30%;
                     top: 20%;
                 }
 
                 @media (min-width: 992px) and (max-width: 1599.98px) {
-                    left: 23%;
+                    #{$start}: 23%;
                     top: 22%;
                 }
                 @media (min-width: 576px) and (max-width: 991.98px) {
-                    left: 23%;
+                    #{$start}: 23%;
                     top: 10%;
                 }
             }
@@ -3848,16 +3853,16 @@ textarea {
             &.data-2 {
 
                 @media (min-width: 1600px) {
-                    left: 42%;
+                    #{$start}: 42%;
                     top: 17%;
                 }
 
                 @media (min-width: 992px) and (max-width: 1599.98px) {
-                    left: 37%;
+                    #{$start}: 37%;
                     top: 20%;
                 }
                 @media (min-width: 576px) and (max-width: 991.98px) {
-                    left: 37%;
+                    #{$start}: 37%;
                     top: 11%;
                 }
             }
@@ -3865,16 +3870,16 @@ textarea {
             &.data-3 {
 
                 @media (min-width: 1600px) {
-                    left: 52%;
+                    #{$start}: 52%;
                     top: 17%;
                 }
 
                 @media (min-width: 992px) and (max-width: 1599.98px) {
-                    left: 48%;
+                    #{$start}: 48%;
                     top: 23%;
                 }
                 @media (min-width: 576px) and (max-width: 991.98px) {
-                    left: 37%;
+                    #{$start}: 37%;
                     top: 12%;
                 }
             }
@@ -3882,16 +3887,33 @@ textarea {
             &.data-4 {
 
                 @media (min-width: 1600px) {
-                    left: 57%;
+                    #{$start}: 57%;
                     top: 15%;
                 }
 
                 @media (min-width: 992px) and (max-width: 1599.98px) {
-                    left: 57%;
+                    #{$start}: 57%;
                     top: 20%;
                 }
                 @media (min-width: 576px) and (max-width: 991.98px) {
-                    left: 57%;
+                    #{$start}: 57%;
+                    top: 5%;
+                }
+            }
+
+            &.data-5 {
+
+                @media (min-width: 1600px) {
+                    #{$start}: 57%;
+                    top: 15%;
+                }
+
+                @media (min-width: 992px) and (max-width: 1599.98px) {
+                    #{$start}: 57%;
+                    top: 20%;
+                }
+                @media (min-width: 576px) and (max-width: 991.98px) {
+                    #{$start}: 57%;
                     top: 5%;
                 }
             }

@@ -486,14 +486,15 @@ if ($(".reach-out-section").length) {
       dataType: "json",
       success: (data) => {
         $.each(data, function (index, element) {
-          console.log("element", element);
+          console.log("element", element.email === "");
+
           output += `
          
         <div class="data data-${data[index].id} text-start p-lg-4 p-3">
           <h2 class="small-title color-blue font-bold">${data[index].country}</h2>
           <p class="small-description">${data[index].description}</p>
           <div class="location-info">
-            <div class="address my-lg-3 my-2">
+            <div class="address my-lg-3 my-2 ${data[index].addressDisable}">
               <i class="bi bi-geo-alt-fill me-1 color-blue"></i>
               <span class="font-bold"> Address: </span>
               <a
@@ -503,17 +504,17 @@ if ($(".reach-out-section").length) {
               >
             </div>
 
-            <div class="tel my-lg-3 my-2">
+            <div class="tel my-lg-3 my-2 ${data[index].telDisable}">
               <i class="bi me-1 color-blue bi-telephone-fill"></i>
               <span class="font-bold"> Tel: </span>
               <a href="tel:${data[index].tel}">${data[index].tel}</a>
             </div>
-            <div class="fax my-lg-3 my-2">
+            <div class="fax my-lg-3 my-2 ${data[index].faxDisable}">
               <i class="bi me-1 color-blue bi-printer-fill"></i>
               <span class="font-bold"> Fax: </span>
               <a href="fax:${data[index].fax}">${data[index].fax}</a>
             </div>
-            <div class="mail my-lg-3 my-2">
+            <div class="mail my-lg-3 my-2 ${data[index].emailDisable}">
               <i class="bi me-1 color-blue bi-envelope-fill"></i>
               <span class="font-bold"> E-mail: </span>
               <a href="mailto:info${data[index].email}m">${data[index].email}</a>
